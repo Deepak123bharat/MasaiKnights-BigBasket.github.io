@@ -484,6 +484,11 @@ function displayProducts(data){
     })
 }
 
+function sortPriceLowtoHigh(data){
+    Arrays.sort(data)
+
+}
+
 
 var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(index){
