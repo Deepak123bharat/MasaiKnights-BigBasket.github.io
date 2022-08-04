@@ -13,7 +13,7 @@ body{
     position: absolute;
     top: 0;
     display: flex;
-   
+    z-index: 3;
    
      
 }

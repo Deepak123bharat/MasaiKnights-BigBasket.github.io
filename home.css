@@ -115,6 +115,7 @@
     width: 80%;
     /* border: 1px solid red; */
     margin: auto;
+    z-index: 2;
     /* background-color: aqua; */
   }
   
@@ -236,7 +237,7 @@
     border-radius: 0px 0px 4px 4px;
   
     visibility: hidden;
-  
+    z-index: 2;
     overflow: hidden;
   }
   .category p {

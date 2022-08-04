@@ -335,6 +335,9 @@
        });
     }
 
+    document.querySelector(".btnCheck").addEventListener("click",()=>{
+        window.location.href = "./payment/address.html"
+    })
 
     function cartVal(){
         var total = products.reduce(function(acc,elem){
