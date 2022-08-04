@@ -2,21 +2,24 @@
     box-sizing: border-box;
 }
 body{
-    padding: 0 70px;
+    padding: 0 70px !important;
     font-family: sans-serif;
    color: rgba(0, 0, 0, .7);
     
 }
 .main-container{
-    position: relative;
-   
+    
+   position: relative;
     display: flex;
     line-height: 1.42;
     font-size: 14px;
 }
+
 .main-container>div:first-child{
     
-    width: 200px;
+    
+    position: fixed;
+
     border-right: 1px solid black;
     border-color: rgba(0, 0, 0, 0.5);
   
@@ -56,21 +59,32 @@ h4{
     border: 1px solid black;
     border-color: rgba(0, 0, 0, 0.5);   
 }
-@media all and (min-width: 451px) and (max-width: 750px) {
+@media all and (min-width: 900px) and (max-width: 1000px) {
     .products-cards{
         
         grid-template-columns: repeat(3,1fr);    
     }
   }
   
-  @media all and (min-width: 100px) and (max-width: 450px) {
+  @media all and (min-width: 680px) and (max-width: 900px) {
     .products-cards{
-        
+        display: grid;
         grid-template-columns: repeat(2,1fr);    
     }
+    
   }
+  @media all and (min-width: 0px) and (max-width: 680px) {
+    .products-cards{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);    
+    }
+    
+  }
+  
 
 .products-cards>div{
+    width: 250px;
+    display: block;
     padding: 10px;
     border: 1px solid blue ;
     border-color: rgba(0, 0, 0, 0.5);
@@ -80,10 +94,7 @@ h4{
     border: 1px solid black;
 }
 
-.main-container>div:last-child:first-child{
-   
-   
-}
+
 h6{
     margin-bottom: 0;
     
