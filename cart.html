@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your backet</title>
+    <style>
+        #basket{
+            width: 70%;
+            /* border: 2px solid red; */
+            margin: auto;
+        }
+        #basket div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .allItem ul{
+            display: flex;
+            list-style: none;
+        }
+        .item_section{
+            background-color: rgb(48, 43, 43);
+        }
+         ul li{
+            margin: 0px 30px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: wheat;
+            list-style: none;
+        }
+        #basketProduct{
+            width: 70%;
+            /* border: 2px solid red; */
+            margin: auto;
+        }
+        #basketProduct div{
+            display: flex;
+            justify-content: space-between;
+            /* margin-right: 200px; */
+        }
+        .allItem ul{
+            display: flex;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="basket">
+        <h1>
+            Your Basket(01 item)
+        </h1>
+        <hr>
+        <div class="item_section">
+            <div>
+                <ul>
+                    <li>ITEM DESCRIPTION</li>
+                </ul>
+            </div>
+            <div class="allItem">
+                <ul>
+                    <li>Unit price</li>
+                    <li>quantity</li>
+                    <li>subtotal</li>
+                    <li>saving</li>
+                </ul>
+              
+            </div>
+
+        </div>
+    </div>
+ <style>
+    .set ul li  {
+        color: black;
+        font-size: 20px;
+        font-weight: bolder;
+        list-style: none;
+        border: 2px solid rgb(0, 255, 85);
+
+    }
+    .set ul{
+        background-color: yellow;
+    }
+     .ItemDiv ul li{
+        color: black;
+        font-size: 14px;
+        /* margin: 0px 0px; */   
+       border: 2px solid red;
+    }
+    #basketProduct div{
+        display: flex;
+        justify-content: space-between;
+    }
+ </style>
+    <div id="basketProduct">
+        <!-- <div>
+            <div class="ItemDiv">
+                <ul>
+                    <li>MEN'S TRAINING WORKOUT READY ELITAGE PANTS</li>
+                </ul>
+            </div>
+            <div class="set">
+                <ul>
+                    <li>Unit price</li>
+                    <li>quantity</li>
+                    <li>subtotal</li>
+                    <li>saving</li>
+                </ul>
+            </div>
+
+        </div> -->
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .price {
+            display: flex;
+            width: 70%;
+            margin: auto;
+            justify-content: space-around;
+        }
+        button{
+            border: 1px solid green;
+            padding: 8px 15px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        .checkOut{
+            border: 1px solid rgb(51, 46, 46);
+            margin-left: 80px;
+            padding: 0px 10px;
+            width: 500px;
+        }
+        .checkOut div{
+            display: flex;
+            justify-content: space-around;
+        }
+        .btnCheck{
+            margin-left: 80px;
+            margin: 10px 0px 10px 130px;
+        }
+        .btnCheck button{
+            padding: 15px 50px;
+            background-color: orange;
+            border: none;
+            border-radius: 8px;
+            color: rgb(48, 43, 43);
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .checkOut h6{
+            font-size: 19px;
+        }
+        .homePage{
+            width: 70%;
+            margin: auto;
+        }
+        .homePage button{
+            margin-left: 100px;
+        }
+        #basketProduct ul{
+            display: flex;
+            /* background-color: red; */
+            /* justify-content: space-between; */
+        }
+       
+    </style>
+    <hr>
+    <div class="price">
+        <div>
+            <Button>EMPTY BASKET</Button>
+        </div>
+
+        <div class="checkOut">
+            <div>
+                <h6>Subtotal</h6>
+                <h6>Rs. 23.50</h6>
+            </div>
+            <hr>
+            <div>
+                <h3>TOTAL</h3>
+                <H3>Rs. 23.50</H3>
+            </div>
+            <hr>
+            <div class="btnCheck">
+                <button>CHECKOUT</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="homePage">
+        <button >CONTINUE SHOPING</button>
+    </div>
+    
+    
+</body>
+</html>
+
+<script>
+    var products = JSON.parse(localStorage.getItem("cart")) || [];
+    var cart = document.getElementById("cart");
+    if(products == 0){
+           cart.innerText = "The cart is empty";
+    }
+    else{
+         displayCart();
+         cartVal();
+    }
+
+
+    function displayCart(){
+       products.map(function(elem,index){
+        // var image = document.createElement("img");
+
+        // image.setAttribute("src",elem.image_url);
+        // image.setAttribute("alt",index);
+    //     <div id="basketProduct">
+    //     <div class="">
+    //         <div class="ItemDiv">
+    //             <ul>
+    //                 <li>ITEM DESCRIPTION</li>
+    //             </ul>
+    //         </div>
+    //         <div class="allItem set">
+    //             <ul>
+    //                 <li>Unit price</li>
+    //                 <li>quantity</li>
+    //                 <li>subtotal</li>
+    //                 <li>saving</li>
+    //             </ul>
+              
+    //         </div>
+
+    //         </div>
+    //    </div>
+        var div = document.createElement("div");
+        //  div.setAttribute("class", "basketPic");
+        var div1 = document.createElement("div");
+         div1.setAttribute("class", "ItemDiv");
+        
+         var ul = document.createElement("ul");
+         var li = document.createElement("li");
+         li.innerText = elem.name;
+
+         ul.append(li)
+         div1.append(ul);
+
+         var div2 = document.createElement("div");
+         div2.setAttribute("class", "allItem");
+         div2.setAttribute("class", "set");
+
+         var ul1 = document.createElement("ul");
+         var li1 = document.createElement("li");
+         li1.innerText = elem.price
+         var li2 = document.createElement("li");
+         li2.innerText = elem.price
+         var li3 = document.createElement("li");
+         li3.innerText = elem.price;
+         var li4 = document.createElement("li");
+         li4.innerText = elem.strikedoffprice - elem.price
+
+        ul1.append(li1,li2,li3,li4);
+
+        div2.append(ul1)
+
+        // var h5 = document.createElement("h5");
+        // h5.innerText = elem.name;
+        
+        // var price = document.createElement("p");
+        // price.innerText = elem.price
+
+        // div.append(h5,price);
+          
+        div.append(div1,div2)
+
+        document.querySelector("#basketProduct").append(div)
+
+
+
+        //    <div>
+        //         <h6>Subtotal</h6>
+        //         <h6>Rs. 23.50</h6>
+        //     </div>
+        //     <hr>
+        //     <div>
+        //         <h3>TOTAL</h3>
+        //         <H3>Rs. 23.50</H3>
+        //     </div>
+         
+        // var div3 = document.createElement("div")
+        // var heading1 = document.createElement("h6");
+        // heading1.innerText = "Subtotal"
+        // var heading2 = document.createElement("h6");
+        // heading2.innerText = elem.price; 
+
+        //  div3.append(heading1,heading2);
+
+
+        // var div4 = document.createElement("div")
+        // var heading3 = document.createElement("h6");
+        // heading3.innerText = "TOTAL"
+
+        // div4.append( heading3,heading4);
+
+        // document.querySelector(".checkOut").append(div3,div4)
+        
+        // document.getElementById("basketProduct").innerHTML = 
+        //           `  <!-- <div class="">
+        //     <div class="ItemDiv">
+        //         <ul>
+        //             <li>${name}</li>
+        //         </ul>
+        //     </div>
+        //     <div class="allItem set">
+        //         <ul>
+        //             <li>${price}</li>
+        //             <li>${quantity}</li>
+        //             <li>${price}</li>
+        //             <li>${stricprice - totalPrice}</li>
+        //         </ul>
+              
+        //     </div>
+
+        // </div> -->`
+       });
+    }
+
+    document.querySelector(".btnCheck").addEventListener("click",()=>{
+        window.location.href = "./payment/address.html"
+    })
+
+    function cartVal(){
+        var total = products.reduce(function(acc,elem){
+            return acc+ elem.price
+        },0);
+        
+        var heading4 = document.createElement("h6");
+        heading4.innerText = "Rs."+ total;
+        // document.querySelector("body").append(heading4)
+        // console.log(total)
+    }
+</script>
