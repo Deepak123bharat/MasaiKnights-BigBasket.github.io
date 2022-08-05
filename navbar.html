@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="/login/login.css">
     <style>
+
+         /* Login css Start */
+         
+         /* Login css End */
         /*-------------- Navbar css Start -----------------*/
         
         #upnav {
@@ -488,23 +493,23 @@
                                 <div class="category-hover-div" id="category-hover-div">
                                     <div class="category-hover-div-1">
                                         <div class="category-hover-div-1-options">
-                                            <a href="./productData/Vegetables/products.html">Fruits &amp; Vegetables</a>
+                                            <a href="/productData/Vegetables/products.html">Fruits &amp; Vegetables</a>
                                         </div>
                                         <div class="category-hover-div-1-options foodgrains_option">
-                                            <a href="./productData/FoodGrains/products.html">Foodgrains, Oil &amp; Masala</a>
+                                            <a href="/productData/FoodGrains/products.html">Foodgrains, Oil &amp; Masala</a>
                                         </div>
                                         <div class="category-hover-div-1-options">
-                                            <a href="./productData/Dairy/products.html">Bakery Cakes & Dairy</a>
+                                            <a href="/productData/Dairy/products.html">Bakery Cakes & Dairy</a>
                                         </div>
-                                        <div class="category-hover-div-1-options"><a href="./productData/Beverages/products.html">Beverages</a></div>
-                                        <div class="category-hover-div-1-options"><a href="./productData/Snacks/products.html">Snacks &amp; Branded Foods</a></div>
-                                        <div class="category-hover-div-1-options"><a href="./productData/Beauty/products.html">Beauty & Hygiene</a></div>
-                                        <div class="category-hover-div-1-options"><a href="./productData/cleaning/products.html">Cleaning &amp; Household</a></div>
-                                        <div class="category-hover-div-1-options"><a href="./productData/kitchen/products.html">Kitchen, Garden &amp; Pets</a></div>
-                                        <div class="category-hover-div-1-options"><a href="./productData/eggs/product.html">Eggs, Meats &amp; Fish</a></div>
-                                        <div class="category-hover-div-1-options"><a href="./productData/Vegetables/products.html">Gourmet &amp; World Food</a></div>
-                                        <div class="category-hover-div-1-options"><a href="./productData/Beauty/products.html">Baby Care</a></div>
-                                        <div class="category-hover-div-1-options"><a href="./productData/FoodGrains/products.html">View All</a></div>
+                                        <div class="category-hover-div-1-options"><a href="/productData/Beverages/products.html">Beverages</a></div>
+                                        <div class="category-hover-div-1-options"><a href="/productData/Snacks/products.html">Snacks &amp; Branded Foods</a></div>
+                                        <div class="category-hover-div-1-options"><a href="/productData/Beauty/products.html">Beauty & Hygiene</a></div>
+                                        <div class="category-hover-div-1-options"><a href="/productData/cleaning/products.html">Cleaning &amp; Household</a></div>
+                                        <div class="category-hover-div-1-options"><a href="/productData/kitchen/products.html">Kitchen, Garden &amp; Pets</a></div>
+                                        <div class="category-hover-div-1-options"><a href="/productData/eggs/product.html">Eggs, Meats &amp; Fish</a></div>
+                                        <div class="category-hover-div-1-options"><a href="/productData/Vegetables/products.html">Gourmet &amp; World Food</a></div>
+                                        <div class="category-hover-div-1-options"><a href="/productData/Beauty/products.html">Baby Care</a></div>
+                                        <div class="category-hover-div-1-options"><a href="/productData/FoodGrains/products.html">View All</a></div>
                                     </div>
                                     <div class="category-hover-div-2">
                                         <div class="category-hover-div-2-options">
@@ -565,6 +570,102 @@
         </div>
 
     </header>
+            <!-- Login Sign Up Start -->
+        
+            <div class="modal-bg" style="line-height: 1;">
+
+                <div class="main-container">
+                    <div class="child-container">
+                        <div class="final-container">
+                            <i id="closeBtn" class="fa-solid fa-circle-xmark" onclick=closepopup()></i>
+                            <div class="box">
+                                <form>
+                                    <h2 class="text-center">Sign Up</h2>
+                                    <div class="input-container">
+                                        <input type="text" id="name" required="" />
+                                        <label>Enter Name</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="email" id="signup-email" required="" />
+                                        <label>Enter Email</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" id="number" required="" />
+                                        <label>Enter Mobile Number (10 Digit)</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="password" id="signup-password" required="" />
+                                        <label>Set Password</label>
+                                    </div>
+                                </form>
+                                <button  style="font-size: 12px;" class="submit-btn" id="switch-to-login" onclick=changeModal()>Already Registered?
+                                    Login Here</button>
+                                <input style="margin-bottom: 20px;" class="submit-btn" type="submit" value="Sign Up" id="signup" onclick=getDetails() />
+                                <p id="terms-conditions">
+                                    By continuing, I accept TCP-bigbasket’s Terms and Conditions
+                                    and Privacy Policy.
+                                </p>
+    
+                            </div>
+                            <div class="box-3">
+                                <form>
+                                    <h2 class="text-center">login</h2>
+    
+                                    <div class="input-container">
+                                        <input type="email" id="login-email" required="" />
+                                        <label>Enter Email</label>
+                                    </div>
+    
+                                    <div class="input-container">
+                                        <input type="password" id="login-password" required="" />
+                                        <label>Enter Password</label>
+                                    </div>
+                                </form>
+                                <button style="font-size: 12px;" class="submit-btn" onclick=changeModal() id="switch-to-signUp">Not Register? Sign Up
+                                    Here </button>
+                                <input style="margin-bottom: 20px;" class="submit-btn" type="submit" value="Log in" id="signup" onclick=checkDetails() />
+                                <p id="terms-conditions">
+                                    By continuing, I accept TCP-bigbasket’s Terms and Conditions
+                                    and Privacy Policy.
+                                </p>
+    
+                            </div>
+                            <div class="box-2">
+                                <div class="homepage-link">
+                                    <a href="">
+                                        <div class="quality-box">
+                                            <div class="logo">
+                                                <i class="fa-solid fa-face-smile"></i>
+                                            </div>
+                                            <div class="logo-text">
+                                                <h3 id="quality-h3">Quality</h3>
+                                                <p id="quality-p">You can trust</p>
+                                            </div>
+                                        </div>
+                                        <div class="quality-box">
+                                            <div class="logo">
+    
+                                                <i class="fa-solid fa-arrow-rotate-left"></i>
+                                            </div>
+                                            <div class="logo-text">
+                                                <h3 id="quality-h3">Return Policy</h3>
+                                                <p id="quality-p">No questions asked</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <hr />
+                                <div class="app-links">
+                                    <p style="margin-bottom: 10px;">Shopping at fingertips!! Download our app</p>
+                                    <a href=""><i class="fa-brands fa-google-play"></i></a>
+                                    <a href=""><i class="fa-brands fa-apple"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Login SignUp End  -->
 </body>
 
 </html>
@@ -625,7 +726,7 @@
     var height = document.getElementById("navbar").offsetHeight
 
     document.getElementById("cart").addEventListener("click", () => {
-        window.location.href = "cart.html"
+        window.location.href = "/cart.html"
     })
 
 
@@ -691,3 +792,4 @@
         return array;
     }
 </script>
+<script src="/scripts/login.js"></script>
