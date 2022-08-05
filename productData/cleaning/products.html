@@ -6,9 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="products.css">
-  <link rel="stylesheet" href="./../../styles/header.css">
-  <link rel="stylesheet" href="./../../styles/main.css">
-  <link rel="stylesheet" href="./../../login/login.css">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
@@ -18,243 +16,16 @@
   <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
     <link rel="icon" href="https://seeklogo.com/images/B/bigbasket-logo-CCFD652568-seeklogo.com.png" type="image/gif">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script> 
+          $(function(){
+            $("#includedContent").load("./../../navbar.html"); 
+          });
+        </script> 
 </head>
 
 <body>
-  <header>
-    <div id="upnav">
-      <div id="navbar">
-        <div id="navbarsub">
-          <div id="navbar_top">
-            <div class="navbar_contact_info"><img style="width: 20px; height: 20px; margin-bottom: -5px;"
-                src="./../../icons/navbar/phone.png">1860 123 1000 </div>
-            <div class="navbar_contact_info"><img style="width: 20px; height: 20px; margin-bottom: -5px;"
-                src="./../../icons/navbar/location.png">560004, bangalore</div>
-            <div class="navbar_contact_info"><img style="width: 20px; height: 20px; margin-bottom: -5px;"
-                src="./../../icons/navbar/user.png"><span id="navbar_login">Log In/Sign Up</span></div>
-            <span id="showname"></span>
-          </div>
-          <div id="navbar_middle">
-            <div id="imgAndshop">
-              <img id="logoImg" src="./../../images/logos/logo.png" alt="" />
-            </div>
-
-            <div id="search_item">
-              <input type="text" name="" placeholder="Search for products..." id="" />
-              <div style="margin-bottom: -2px;" id="mfglass"><i class="fa-solid fa-magnifying-glass"></i></div>
-            </div>
-            <div id="cart">
-              <div id="cart_img">
-                <img src="./../../images/basket.png" alt="" />
-              </div>
-              <div id="cart_qunt">
-                <p>My Basket</p>
-                <br>
-                <p><span id="cart_items">0</span> Item</p>
-              </div>
-            </div>
-          </div>
-          <div id="navbar_bottom">
-            <div class="navbar_bottom_first">
-
-              <!-- -------- Dropdown ----------- -->
-              <div class="category">
-                <p>SHOP BY CATEGORY <i class="fa-solid fa-chevron-down"></i></p>
-                <div class="category-hover-div" id="category-hover-div">
-                  <div class="category-hover-div-1">
-                    <div class="category-hover-div-1-options">
-                      Fruits &amp; Vegetables
-                    </div>
-                    <div class="category-hover-div-1-options foodgrains_option">
-                      Foodgrains, Oil &amp; Masala
-                    </div>
-                    <div class="category-hover-div-1-options">
-                      <a href="productData/products.html">Bakery Cakes & Dairy</a>
-                    </div>
-                    <div class="category-hover-div-1-options">Beverages</div>
-                    <div class="category-hover-div-1-options">Snacks &amp; Branded Foods</div>
-                    <div class="category-hover-div-1-options">Beauty & Hygiene</div>
-                    <div class="category-hover-div-1-options">Cleaning &amp; Household</div>
-                    <div class="category-hover-div-1-options">Kitchen, Garden &amp; Pets</div>
-                    <div class="category-hover-div-1-options">Eggs, Meats &amp; Fish</div>
-                    <div class="category-hover-div-1-options">Gourmet &amp; World Food</div>
-                    <div class="category-hover-div-1-options">Baby Care</div>
-                    <div class="category-hover-div-1-options">View All</div>
-                  </div>
-                  <div class="category-hover-div-2">
-                    <div class="category-hover-div-2-options">
-                      Fresh Vegetables
-                    </div>
-                    <div class="category-hover-div-2-options">
-                      Herbs & Seasonings
-                    </div><br>
-                    <div class="category-hover-div-2-options">
-                      Fresh Fruits
-                    </div><br>
-                    <div class="category-hover-div-2-options">Organic Fruits & Vegetables</div><br>
-                    <div class="category-hover-div-2-options">Cuts & Sprouts</div><br>
-                    <div class="category-hover-div-2-options">Exotic Fruits & Veggies</div><br>
-                    <div class="category-hover-div-2-options">Flower Bouquets, Bunches</div><br>
-                  </div>
-                  <div class="category-hover-div-3">
-                    <div class="category-hover-div-3-options">
-                                          Fresh Vegetables
-                                      </div>
-                                      <div class="category-hover-div-3-options">
-                                          Herbs & Seasonings
-                                      </div><br>
-                                      <div class="category-hover-div-3-options">
-                                          Fresh Fruits
-                                      </div><br>
-                                      <div class="category-hover-div-3-options">Organic Fruits & Vegetables</div><br>
-                                      <div class="category-hover-div-3-options">Cuts & Sprouts</div><br>
-                                      <div class="category-hover-div-3-options">Exotic Fruits & Veggies</div><br>
-                                      <div class="category-hover-div-3-options">Flower Bouquets, Bunches</div><br>
-                  </div>
-                  <div class="category-hover-div-4">
-                    <div class="category-hover-div-4-options">
-                                          Fresh Vegetables
-                                      </div>
-                                      <div class="category-hover-div-4-options">
-                                          Herbs & Seasonings
-                                      </div><br>
-                                      <div class="category-hover-div-4-options">
-                                          Fresh Fruits
-                                      </div><br>
-                                      <div class="category-hover-div-4-options">Organic Fruits & Vegetables</div><br>
-                                      <div class="category-hover-div-4-options">Cuts & Sprouts</div><br>
-                                      <div class="category-hover-div-4-options">Exotic Fruits & Veggies</div><br>
-                                      <div class="category-hover-div-4-options">Flower Bouquets, Bunches</div><br>
-                  </div>
-                </div>
-
-              </div>
-              <div id="offers">
-                <p><img src="./../../icons/bg icon/offer.svg" alt="" srcset="">OFFERS</p>
-              </div>
-              <div>
-                <p><img src="./../../icons/bg icon/bike.svg" alt="" srcset=""> BB EXPRESS</p>
-              </div>
-              <div>
-                <p><img src="./../../icons/bg icon/home.svg" alt="" srcset="">BB SPECIALTY</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </header>
-        <!-- Login Sign Up Start -->
-        <div id="nav_space">
-
-        </div>
-        <div class="modal-bg">
-            <div class="main-container">
-                <div class="child-container">
-                    <div class="final-container">
-                        <i id="closeBtn" class="fa-solid fa-circle-xmark" onclick=closepopup()></i>
-                        <div class="box">
-                            <form>
-                                <h2 class="text-center">Sign Up</h2>
-                                <div class="input-container">
-                                    <input type="text" id="name" required="" />
-                                    <label>Enter Name</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="email" id="signup-email" required="" />
-                                    <label>Enter Email</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="number" id="number" required="" />
-                                    <label>Enter Mobile Number (10 Digit)</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="password" id="signup-password" required="" />
-                                    <label>Set Password</label>
-                                </div>
-                            </form>
-                            <button class="submit-btn" id="switch-to-login" onclick=changeModal()>Already Registered?
-                                Login Here</button>
-                            <input class="submit-btn" type="submit" value="Sign Up" id="signup" onclick=getDetails() />
-                            <p id="terms-conditions">
-                                By continuing, I accept TCP-bigbasket’s Terms and Conditions
-                                and Privacy Policy.
-                            </p>
-
-                        </div>
-                        <div class="box-3">
-                            <form>
-                                <h2 class="text-center">login</h2>
-
-                                <div class="input-container">
-                                    <input type="email" id="login-email" required="" />
-                                    <label>Enter Email</label>
-                                </div>
-
-                                <div class="input-container">
-                                    <input type="password" id="login-password" required="" />
-                                    <label>Enter Password</label>
-                                </div>
-                            </form>
-                            <button class="submit-btn" onclick=changeModal() id="switch-to-signUp">Not Register? Sign Up
-                                Here </button>
-                            <input class="submit-btn" type="submit" value="Log in" id="signup" onclick=checkDetails() />
-                            <p id="terms-conditions">
-                                By continuing, I accept TCP-bigbasket’s Terms and Conditions
-                                and Privacy Policy.
-                            </p>
-
-                        </div>
-                        <div class="box-2">
-                            <div class="homepage-link">
-                                <a href="">
-                                    <div class="quality-box">
-                                        <div class="logo">
-                                            <i class="fa-solid fa-face-smile"></i>
-                                        </div>
-                                        <div class="logo-text">
-                                            <h3>Quality</h3>
-                                            <p>You can trust</p>
-                                        </div>
-                                    </div>
-                                    <div class="quality-box">
-                                        <div class="logo">
-
-                                            <i class="fa-solid fa-arrow-rotate-left"></i>
-                                        </div>
-                                        <div class="logo-text">
-                                            <h3>Return Policy</h3>
-                                            <p>No questions asked</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <hr />
-                            <div class="app-links">
-                                <p>Shopping at fingertips!! Download our app</p>
-                                <a href=""><i class="fa-brands fa-google-play"></i></a>
-                                <a href=""><i class="fa-brands fa-apple"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Login SignUp End  -->
-  
+  <div id="includedContent"></div>
   <section class="main-container">
     <div class="filters-section">
 
@@ -346,8 +117,6 @@
   </section>
 </body>
 <script src="products.js"></script>
-<script src="./../../scripts/header.js"></script>
-<script src="./../../scripts/main.js"></script>
-<script src="./../../scripts/login.js"></script>
+
 
 </html>
