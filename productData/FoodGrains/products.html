@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="products.css">
-    <title>Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
+    <title>Foodgrains, Oil & Masala</title>
     
     <script
       src="https://kit.fontawesome.com/b678f324bd.js"
@@ -21,33 +24,25 @@
           
           <div class="filter-checkbox">
             
-            <input type="checkbox" /><span>Amul</span>
+            <input type="checkbox" /><span>Aashirvaad</span>
           </div>
           <div class="filter-checkbox">
-            <input type="checkbox" /><span>Nestle</span>
+            <input type="checkbox" /><span>Dhara</span>
           </div>
           <div class="filter-checkbox">
-            <input type="checkbox" /><span>Moreish</span>
+            <input type="checkbox" /><span>BB Royal</span>
           </div>
           <div class="filter-checkbox">
-            <input type="checkbox" /><span>Hersheys</span>
+            <input type="checkbox" /><span>Fortune</span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>Shree Neelkamal</span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>BB Popular</span>
           </div>
         </div>
-        <div class="pack-filter">
-            <h4 class="filter-title">Pack Type</h4>
-          <div class="filter-checkbox">
-            <input type="checkbox" /><span>Tubs</span>
-          </div>
-          <div class="filter-checkbox">
-            <input type="checkbox" /><span>Pouch</span>
-          </div>
-          <div class="filter-checkbox">
-            <input type="checkbox" /><span>Carton</span>
-          </div>
-          <div class="filter-checkbox">
-            <input type="checkbox" /><span>Tin</span>
-          </div>
-        </div>
+        
         <div class="price-filter">
             <h4 class="filter-title">Price</h4>
           <div class="filter-checkbox">
@@ -86,7 +81,7 @@
       </div>
 
       <div class="products-container">
-        <div class="products-heading"><h2>Bakery,Cakes & Dairy</h2></div>
+        <div class="products-heading"><h2 id="title">Foodgrains, Oil & Masala</h2></div>
         <div class="sort-bar"> <select  id="sort-bar">
             <option value="">Popularity</option>
             <option value="">Price - Low to High </option>
@@ -94,6 +89,7 @@
             <option value="">Alphabetical</option>
             <option value="">% Off - High to Low</option>
         </select> </div>
+        <div class="allproducts-border"><i class="fa-solid fa-truck"> <span>ALL PRODUCTS</span>   </i> </div>
         <div class="products-cards"></div>
         
 
@@ -101,4 +97,4 @@
     </section>
   </body>
 </html>
-<script src="api.js"></script>
+<script src="products.js"></script>

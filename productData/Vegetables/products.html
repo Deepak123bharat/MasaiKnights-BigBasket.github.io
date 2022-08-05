@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
+    <title>Fruits & Vegetables</title>
+    
+    <script
+      src="https://kit.fontawesome.com/b678f324bd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="main-container">
+      <div class="filters-section">
+        
+        <div class="brand-filter">
+          <h4 class="filter-title">Brand</h4>
+          
+          <div class="filter-checkbox">
+            
+            <input type="checkbox" /><span>Fresho</span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>BB Combo</span>
+          </div>
+          <!-- <div class="filter-checkbox">
+            <input type="checkbox" /><span>BB Popular</span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>BB Royal</span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>Fortune</span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>Tata Salt</span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>Shree Neelkamal</span>
+          </div> -->
+        </div>
+        
+        <div class="price-filter">
+            <h4 class="filter-title">Price</h4>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>Less than Rs 20 </span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>Rs 21 to Rs 50 </span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>Rs 51 to Rs 100 </span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>Rs 101 to Rs 200 </span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>More than Rs 201 </span>
+          </div>
+          
+        </div>
+        <div class="discount-filter">
+            <h4 class="filter-title">Discount</h4>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>Upto 5% </span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>5% - 10% </span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>10% - 15% </span>
+          </div>
+          <div class="filter-checkbox">
+            <input type="checkbox" /><span>More than 15%</span>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="products-container">
+        <div class="products-heading"><h2 id="title">Fruits & Vegetables</h2></div>
+        <div class="sort-bar"> <select  id="sort-bar">
+            <option value="">Popularity</option>
+            <option value="">Price - Low to High </option>
+            <option value="">Price - High to Low</option>
+            <option value="">Alphabetical</option>
+            <option value="">% Off - High to Low</option>
+        </select> </div>
+        <div class="allproducts-border"><i class="fa-solid fa-truck"> <span>ALL PRODUCTS</span>   </i> </div>
+        <div class="products-cards"></div>
+        
+
+      </div>
+    </section>
+  </body>
+</html>
+<script src="products.js"></script>
