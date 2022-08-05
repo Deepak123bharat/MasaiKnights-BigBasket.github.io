@@ -21,141 +21,20 @@
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="login/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+        $(function(){
+        $("#includedContent").load("navbar.html"); 
+        });
+    </script> 
 </head>
 
 <body>
-    <header>
-        <div id="upnav">
-            <div id="navbar">
-                <div id="navbarsub">
-                    <div id="navbar_top">
-                        <div class="navbar_contact_info"><img style="width: 20px; height: 20px; margin-bottom: -5px;"
-                                src="./icons/navbar/phone.png">1860 123 1000 </div>
-                        <div class="navbar_contact_info"><img style="width: 20px; height: 20px; margin-bottom: -5px;"
-                                src="./icons/navbar/location.png">560004, bangalore</div>
-                        <div class="navbar_contact_info"><img style="width: 20px; height: 20px; margin-bottom: -5px;"
-                                src="./icons/navbar/user.png"><span id="navbar_login">Log In/Sign Up</span></div>
-                        <span id="showname"></span>
-                    </div> 
-                    <div id="navbar_middle">
-                        <div id="imgAndshop">
-                            <img id="logoImg" src="./images/logos/logo.png" alt="" />
-                        </div>
-                        
-                        <div id="search_item">
-                            <input type="text" name="" placeholder="Search for products..." id="" />
-                            <div style="margin-bottom: -2px;" id="mfglass"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        </div>
-                        <div id="cart">
-                            <div id="cart_img">
-                                <img src="./images/basket.png" alt="" />
-                            </div>
-                            <div id="cart_qunt">
-                                <p>My Basket</p>
-                                <br>
-                                <p><span id="cart_items">0</span> Item</p>
-                            </div>
-                        </div>       
-                    </div>
-                    <div id="navbar_bottom">
-                        <div class="navbar_bottom_first">
-            
-                            <!-- -------- Dropdown ----------- -->
-                            <div class="category">
-                                <p>SHOP BY CATEGORY <i class="fa-solid fa-chevron-down"></i></p>
-                                <div class="category-hover-div" id="category-hover-div">
-                                    <div class="category-hover-div-1">
-                                        <div class="category-hover-div-1-options">
-                                            Fruits &amp; Vegetables
-                                        </div>
-                                        <div class="category-hover-div-1-options foodgrains_option">
-                                            <a href="productData/products.html">Foodgrains, Oil &amp; Masala</a>
-                                        </div>
-                                        <div class="category-hover-div-1-options">
-                                            <a href="productData/products.html">Bakery Cakes & Dairy</a>
-                                        </div>
-                                        <div class="category-hover-div-1-options">Beverages</div>
-                                        <div class="category-hover-div-1-options">Snacks &amp; Branded Foods</div>
-                                        <div class="category-hover-div-1-options">Beauty & Hygiene</div>
-                                        <div class="category-hover-div-1-options">Cleaning &amp; Household</div>
-                                        <div class="category-hover-div-1-options">Kitchen, Garden &amp; Pets</div>
-                                        <div class="category-hover-div-1-options">Eggs, Meats &amp; Fish</div>
-                                        <div class="category-hover-div-1-options">Gourmet &amp; World Food</div>
-                                        <div class="category-hover-div-1-options">Baby Care</div>
-                                        <div class="category-hover-div-1-options">View All</div>
-                                    </div>
-                                    <div class="category-hover-div-2">
-                                            <div class="category-hover-div-2-options">
-                                                Fresh Vegetables
-                                            </div>
-                                            <div class="category-hover-div-2-options">
-                                                Herbs & Seasonings
-                                            </div><br>
-                                            <div class="category-hover-div-2-options">
-                                                Fresh Fruits
-                                            </div><br>
-                                            <div class="category-hover-div-2-options">Organic Fruits & Vegetables</div><br>
-                                            <div class="category-hover-div-2-options">Cuts & Sprouts</div><br>
-                                            <div class="category-hover-div-2-options">Exotic Fruits & Veggies</div><br>
-                                            <div class="category-hover-div-2-options">Flower Bouquets, Bunches</div><br>
-                                    </div>
-                                    <div class="category-hover-div-3">
-                                        <div class="category-hover-div-3-options">
-                                            Fresh Vegetables
-                                        </div>
-                                        <div class="category-hover-div-3-options">
-                                            Herbs & Seasonings
-                                        </div><br>
-                                        <div class="category-hover-div-3-options">
-                                            Fresh Fruits
-                                        </div><br>
-                                        <div class="category-hover-div-3-options">Organic Fruits & Vegetables</div><br>
-                                        <div class="category-hover-div-3-options">Cuts & Sprouts</div><br>
-                                        <div class="category-hover-div-3-options">Exotic Fruits & Veggies</div><br>
-                                        <div class="category-hover-div-3-options">Flower Bouquets, Bunches</div><br>
-                                    </div>
-                                    <div class="category-hover-div-4">
-                                        <div class="category-hover-div-4-options">
-                                            Fresh Vegetables
-                                        </div>
-                                        <div class="category-hover-div-4-options">
-                                            Herbs & Seasonings
-                                        </div><br>
-                                        <div class="category-hover-div-4-options">
-                                            Fresh Fruits
-                                        </div><br>
-                                        <div class="category-hover-div-4-options">Organic Fruits & Vegetables</div><br>
-                                        <div class="category-hover-div-4-options">Cuts & Sprouts</div><br>
-                                        <div class="category-hover-div-4-options">Exotic Fruits & Veggies</div><br>
-                                        <div class="category-hover-div-4-options">Flower Bouquets, Bunches</div><br>
-                                    </div>
-                                </div>
-            
-                            </div>
-                            <div id="offers">
-                                <p><img src="./icons/bg icon/offer.svg" alt="" srcset="">OFFERS</p>
-                            </div>
-                            <div>
-                                <p><img src="./icons/bg icon/bike.svg" alt="" srcset=""> BB EXPRESS</p>
-                            </div>
-                            <div>
-                                <p><img src="./icons/bg icon/home.svg" alt="" srcset="">BB SPECIALTY</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-    </header>
+    
+    <div id="includedContent"></div>
     <main>
         <!-- Login Sign Up Start -->
-        <div id="nav_space">
-
-        </div>
         <div class="modal-bg">
             <div class="main-container">
                 <div class="child-container">
