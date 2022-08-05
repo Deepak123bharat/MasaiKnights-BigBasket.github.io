@@ -184,18 +184,18 @@
     box-shadow: 2px 1px 1px 1px rgb(147, 144, 144);
   }
   
-  .category-hover-div-left {
-    width: 20%;
+  .category-hover-div-1 {
+    width: 25%;
     height: auto;
     display: flex;
     flex-direction: column;
     position: relative;
   }
-  .category-hover-div-left-options:hover {
+  .category-hover-div-1-options:hover {
     background: #EAEAEA;
   }
   
-  .category-hover-div-left-options {
+  .category-hover-div-1-options {
     width: 100%;
     height: auto;
     /* line-height: 60px;
@@ -210,35 +210,88 @@
     /* padding-right: 25px; */
     position: relative;
   }
-  
-  .category-hover-div-left-options:hover {
-    color: #000;
-  }
-  
-  .category-hover-div-right {
-    width: 70%;
+
+  .category-hover-div-2 {
+    width: 25%;
     height: auto;
     display: flex;
-    padding-left: 45px;
+    flex-direction: column;
+    background-color: #EAEAEA;
+    z-index: 1;
+  }
+
+  .category-hover-div-2-options {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    border-bottom: 1px solid #e4e4e4;
+  
+    font-size: 14px;
+    display: flex;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+  }
+  .category-hover-div-2-options:hover {
+    background-color: white;
+  }
+
+  .category-hover-div-3 {
+    width: 25%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: white;
+    z-index: 1;
+  }
+
+  .category-hover-div-3-options {
+    width: 100%;
+    height: auto;
+    /* line-height: 60px;
+       */
+    padding: 5%;
+    border-bottom: 1px solid #e4e4e4;
+  
+    font-size: 14px;
+    display: flex;
+    color: #555;
+    cursor: pointer;
+    /* padding-right: 25px; */
+    position: relative;
+  }
+  .category-hover-div-3-options:hover {
+    background-color: white;
+  }
+  
+  .category-hover-div-4 {
+    width: 25%;
+    height: auto;
+    display: flex;
     overflow: hidden;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: #eaeaea;
+    background-color: white;
     z-index: 1;
   }
+
+  .category-hover-div-4-options {
+    width: 100%;
+    height: auto;
+    /* line-height: 60px;
+       */
+    padding: 5%;
+    border-bottom: 1px solid #e4e4e4;
   
-  .category-hover-div-right a {
-    width: 25%;
-    /* height: auto; */
     font-size: 14px;
-    line-height: 30px;
-    color: black;
+    display: flex;
+    color: #555;
     cursor: pointer;
-    text-decoration: none;
-    font-weight: normal;
+    /* padding-right: 25px; */
+    position: relative;
   }
-  
-  .category-hover-div-right a:hover {
+  .category-hover-div-4-options:hover {
     background-color: white;
   }
   

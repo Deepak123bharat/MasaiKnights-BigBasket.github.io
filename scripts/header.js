@@ -12,7 +12,7 @@ window.addEventListener("scroll", ()=>{
         logo.style.height = "50px"
         logo.style.margin = "0"
         logo.style.padding = "0"
-        document.getElementById("navbar").style.boxShadow= "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
+        document.getElementById("navbar").style.boxShadow= "rgba(60, 64, 67, 0.5) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
         var img = document.getElementById("imgShopId")
         if(img==null)
         {
@@ -64,3 +64,77 @@ document.getElementById("cart").addEventListener("click", ()=>{
 
 // add shop with logo when scrolling in y direction
 
+//Shop by category arr 
+var arr = ["Fresh Vegetables", "Herbs & Seasonings", "Fresh Fruits", "Organic Fruits & Vegetables", "Cuts & Sprouts","Exotic Fruits & Veggies", "Flower Bouquets, Bunches" ]
+
+var items = shuffle(arr)
+var div = document.querySelector(".category-hover-div")
+var div1 = document.querySelectorAll(".category-hover-div-1-options")
+
+Array.from(div1).forEach(element => {
+    element.addEventListener("mouseover", ()=>{
+        var div2 = document.querySelector(".category-hover-div-2")
+        div2.innerHTML = ""
+        arr = shuffle(arr)
+        arr.forEach(element => {
+            var it = document.createElement("div")
+            it.className = "category-hover-div-2-options"
+            it.innerText = element
+            div2.append(it)
+        });
+
+        var div3 = document.querySelector(".category-hover-div-3")
+        div3.innerHTML = ""
+        arr = shuffle(arr)
+        arr.forEach(element => {
+            var it = document.createElement("div")
+            it.className = "category-hover-div-3-options"
+            it.innerText = element
+            div3.append(it)
+        });
+
+        var div4 = document.querySelector(".category-hover-div-4")
+        div4.innerHTML = ""
+        arr = shuffle(arr)
+        arr.forEach(element => {
+            var it = document.createElement("div")
+            it.className = "category-hover-div-4-options"
+            it.innerText = element
+            div4.append(it)
+        });
+    
+    })
+})
+
+
+
+arr.forEach(element => {
+    var it = document.createElement("div")
+    it.className = "category-hover-div-2-options"
+    it.innerText = element
+    div3.append(it)
+});
+arr.forEach(element => {
+    var it = document.createElement("div")
+    it.className = "category-hover-div-2-options"
+    it.innerText = element
+    div4.append(it)
+});
+
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+}
