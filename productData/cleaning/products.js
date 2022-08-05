@@ -6,8 +6,8 @@ var dairyArr = [
         brand:"Harpic",
         name : "Disinfectant Toilet Cleaner Liquid - Originalc",
         Quantity : "1 L",
-        price : "Rs 567.40",
-        strikedOdprice : "Rs 585.60"
+        price : " 567.40",
+        strikedOdprice : " 585.60"
 
     },
     {
@@ -16,8 +16,8 @@ var dairyArr = [
         brand:"Harpic",
         name : "Disinfectant Bathroom Cleaner Liquid, Lemon",
         Quantity : "1 L",
-        price : "Rs 172.90",
-        strikedOdprice : "Rs 180.00"
+        price : " 172.90",
+        strikedOdprice : " 180.00"
 
     },
     
@@ -26,8 +26,8 @@ var dairyArr = [
         brand:"Harpic",
         name : "Easy Wash Detergent Powder",
         Quantity : "1.5 Kg",
-        price : "Rs 199",
-        strikedOdprice : "Rs 226"
+        price : " 199",
+        strikedOdprice : " 226"
 
     },
     {
@@ -35,8 +35,8 @@ var dairyArr = [
         brand:"Harpic",
         name : "Dishwash Liquid Gel Lemon Refill Pouch",
         Quantity : "2 L",
-        price : "Rs 355",
-        strikedOdprice : "Rs 445"
+        price : " 355",
+        strikedOdprice : " 445"
 
     },
     {
@@ -44,8 +44,8 @@ var dairyArr = [
         brand:"Vim",
         name : "Disinfectant Surface & Floor Cleaner Liquid - Citrus",
         Quantity : "5 L",
-        price : "Rs 781.08",
-        strikedOdprice : "Rs 840"
+        price : "781.08",
+        strikedOdprice : " 840"
 
     },
     {
@@ -53,8 +53,8 @@ var dairyArr = [
         brand:"Vim",
         name : "Dishwash Bar - Lemon",
         Quantity : "60 G",
-        price : "Rs 5",
-        strikedOdprice : "Rs 5.50"
+        price : " 5",
+        strikedOdprice : " 5.50"
 
     },
     {
@@ -62,8 +62,8 @@ var dairyArr = [
         brand:"Vim",
         name : "Bathroom Cleaner Lemon 1 L + Toilet Cleaner, Original 1 L",
         Quantity : "1 L + 1 L",
-        price : "Rs 362.05",
-        strikedOdprice : "Rs 394.05"
+        price : " 362.05",
+        strikedOdprice : " 394.05"
 
     },
     {
@@ -71,8 +71,8 @@ var dairyArr = [
         brand:"Vim",
         name : "After Wash Morning Fresh Fabric Conditioner",
         Quantity : "860ml",
-        price : "Rs 205",
-        strikedOdprice : "Rs 225"
+        price : " 205",
+        strikedOdprice : " 225"
 
     },
     {
@@ -80,8 +80,8 @@ var dairyArr = [
         brand:"Vim",
         name : "After Wash Fabric Conditioner - Morning Fresh",
         Quantity : "2 L",
-        price : "Rs 430",
-        strikedOdprice : "Rs 480"
+        price : " 430",
+        strikedOdprice : " 480"
 
     },
     {
@@ -89,8 +89,8 @@ var dairyArr = [
         brand:"Surf Excel",
         name : "Matic Front Load Liquid Detergent",
         Quantity : "1 L",
-        price : "Rs 200.00",
-        strikedOdprice : "Rs 250.00"
+        price : " 200.00",
+        strikedOdprice : " 250.00"
 
     },
     {
@@ -98,8 +98,8 @@ var dairyArr = [
          brand:"Surf Excel",
         name : "Matic Liquid Detergent - Front Load, Refill Pack",
         Quantity : "4 L",
-        price : "Rs 830",
-        strikedOdprice : "Rs 960"
+        price : " 830",
+        strikedOdprice : " 960"
 
     },
     {
@@ -107,8 +107,8 @@ var dairyArr = [
         brand:"Surf Excel",
         name : "Matic Front Load Liquid Detergent",
         Quantity : "1 L",
-        price : "Rs 176.00",
-        strikedOdprice : "Rs 220.00"
+        price : "176.00",
+        strikedOdprice : " 220.00"
 
     },
     {
@@ -116,8 +116,8 @@ var dairyArr = [
         brand:"Surf Excel",
         name : "Matic Top Load Detergent Powder",
         Quantity : "1 kg",
-        price : "Rs 350",
-        strikedOdprice : "Rs 410"
+        price : "350",
+        strikedOdprice : " 410"
 
     },
     {
@@ -125,8 +125,8 @@ var dairyArr = [
         brand:"Surf Excel",
         name : "Detergent - Liquid, Matic, Top Load",
         Quantity : "2 L",
-        price : "Rs 359",
-        strikedOdprice : "Rs 420"
+        price : " 359",
+        strikedOdprice : " 420"
 
     },
     {
@@ -134,8 +134,8 @@ var dairyArr = [
         brand:"Ariel",
         name : "Harpic Toilet Cleaner Liquid, Original 1 L + Lizol Floor & Surface Cleaner Liquid, Floral 2 L",
         Quantity : "1 items",
-        price : "Rs 565.15",
-        strikedOdprice : "Rs 594.00"
+        price : " 565.15",
+        strikedOdprice : " 594.00"
 
     },
     {
@@ -143,8 +143,8 @@ var dairyArr = [
         brand:"Ariel",
         name : "Dishwash Liquid - Lime",
         Quantity : "750 ml",
-        price : "Rs 159",
-        strikedOdprice : "Rs 204"
+        price : "159",
+        strikedOdprice : " 204"
 
     }
 ]
