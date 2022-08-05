@@ -217,7 +217,7 @@ function sortPriceLowtoHigh(data){
 var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(index){
     
-    var product = dairyArr.filter(function(elem,i){
+    var product = BeautyArr.filter(function(elem,i){
         return index==i;
     })
     cartArr.push(product[0]);
