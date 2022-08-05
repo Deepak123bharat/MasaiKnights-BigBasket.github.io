@@ -106,21 +106,6 @@ Array.from(div1).forEach(element => {
     })
 })
 
-
-
-arr.forEach(element => {
-    var it = document.createElement("div")
-    it.className = "category-hover-div-2-options"
-    it.innerText = element
-    div3.append(it)
-});
-arr.forEach(element => {
-    var it = document.createElement("div")
-    it.className = "category-hover-div-2-options"
-    it.innerText = element
-    div4.append(it)
-});
-
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
