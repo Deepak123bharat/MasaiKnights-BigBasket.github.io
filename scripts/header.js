@@ -58,8 +58,9 @@ var height = document.getElementById("navbar").offsetHeight
 document.getElementById("nav_space").style.height="140px"
 
 document.getElementById("cart").addEventListener("click", ()=>{
-    window.location.href="../cart.html"
+    window.location.href="./cart.html"
 })
+
 
 
 // add shop with logo when scrolling in y direction
