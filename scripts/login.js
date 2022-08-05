@@ -4,8 +4,6 @@ function showLoginTab(){
 document.querySelector("#closeBtn").addEventListener("click",closepopup());
 
 function closepopup(){
-    
-
     document.querySelector(".modal-bg").style.display="none";
 }
 function changeModal(){
