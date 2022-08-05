@@ -3,14 +3,23 @@
   display: flex;
   align-content: center;
   justify-content: space-around;
+  /* border: 2px dashed red; */
+  height: 200px;
 }
 #navbar {
-    width: 80%;
+    width: 100%;
     z-index: 2;
+    display: flex;
     position: fixed;
-    text-align:center;
     z-index:2;
     background-color: #FFFFFF;
+    justify-content: center;
+    /* border: 2px dashed black; */
+   
+  }
+
+  #navbarsub{
+    width: 80%;
   }
   
   #navbar_top {
@@ -21,8 +30,13 @@
   
   #navbar_middle {
     display: flex;
+    flex-direction: row;
     text-align: center;
     align-items: center;
+    justify-content: space-between;
+  }
+  #navbar_middle_right{
+    display: flex;
     justify-content: space-between;
   }
   
@@ -163,6 +177,12 @@
     opacity: 1;
     box-shadow: 2px 1px 1px 1px rgb(147, 144, 144);
   }
+  #shopText:hover .category-hover-div{
+    margin-top: 2.6%;
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 2px 1px 1px 1px rgb(147, 144, 144);
+  }
   
   .category-hover-div-left {
     width: 20%;
@@ -285,46 +305,6 @@
   .navbar_contact_info:hover {
     color: #84c225;
     cursor: pointer;
-  }
-  
-  #sign-in>div:nth-of-type(2) {
-    background-color: white;
-    width: 100%;
-  }
-  
-  .sign-close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-  
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* #mobile-email,
-  #name {
-    border: none;
-    border-bottom: 1px solid #b3b3b3;
-    margin-top: 30px;
-    margin-left: 30px;
-    width: 85%;
-    padding-bottom: 10px;
-  } */
-  
-  #sign-up-in~button {
-    margin-top: 250px;
-    margin-left: 37px;
-  
-    border: none;
-    color: white;
-    background-color: #27bbb8;
-    font-weight: 700;
-    width: 85%;
-    height: 40px;
-  }
-  
-  #showname {
-    color: #84c225;
   }
   
   #mfglass {
