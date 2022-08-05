@@ -191,6 +191,7 @@ function displayProducts(data){
        
        
         button.innerHTML='<i class="fa-solid fa-cart-plus"></i>';
+       
         button.addEventListener("click",function(){
             addToCart(index);
         })
@@ -208,10 +209,7 @@ function displayProducts(data){
     })
 }
 
-function sortPriceLowtoHigh(data){
-    Arrays.sort(data)
 
-}
 
 
 var cartArr = JSON.parse(localStorage.getItem("cart")) || [];

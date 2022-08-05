@@ -12,7 +12,7 @@ body{
     background-color: rgba(0,0,0,0.8);
     position: absolute;
     top: 0;
-    display: flex;
+    display: none;
     z-index: 3;
    
      
@@ -220,16 +220,28 @@ body{
     margin-left: 10px;
     
 }
-.logo-text>h3,p{
+#quality-h3{
     padding: 0;
     margin: 0;
     font-weight: bold;
     opacity: .6;
+    font-size: 14px;
+}
+#quality-p{
+    padding: 0;
+    margin: 0;
+    opacity: .6;
+    font-size: 10px;
+
 }
 .app-links>a{
     margin: 0 20px 0 2px;
     
 
+}
+#applinks-p{
+    margin: 0;
+    padding-bottom: 0;
 }
 .app-links>a>i{
     margin-top: 10px;
@@ -255,7 +267,6 @@ hr{
     border-bottom:1px solid #eee;
     opacity: 0.2;
 }
-
 
 
 

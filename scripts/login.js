@@ -1,10 +1,13 @@
 function showLoginTab(){
+   
     document.querySelector(".modal-bg").style.display="flex";
+    document.querySelector("body").style.overflow="hidden";
 }
 document.querySelector("#closeBtn").addEventListener("click",closepopup());
 
 function closepopup(){
     document.querySelector(".modal-bg").style.display="none";
+    document.querySelector("body").style.overflow="auto";
 }
 function changeModal(){
     

@@ -31,11 +31,17 @@
 </head>
 
 <body>
+
     
     <div id="includedContent"></div>
-    <main>
+    
+
+   
+   
         <!-- Login Sign Up Start -->
-        <div class="modal-bg">
+        
+        <div class="modal-bg" style="line-height: 1;">
+
             <div class="main-container">
                 <div class="child-container">
                     <div class="final-container">
@@ -60,9 +66,9 @@
                                     <label>Set Password</label>
                                 </div>
                             </form>
-                            <button class="submit-btn" id="switch-to-login" onclick=changeModal()>Already Registered?
+                            <button  style="font-size: 12px;" class="submit-btn" id="switch-to-login" onclick=changeModal()>Already Registered?
                                 Login Here</button>
-                            <input class="submit-btn" type="submit" value="Sign Up" id="signup" onclick=getDetails() />
+                            <input style="margin-bottom: 20px;" class="submit-btn" type="submit" value="Sign Up" id="signup" onclick=getDetails() />
                             <p id="terms-conditions">
                                 By continuing, I accept TCP-bigbasket’s Terms and Conditions
                                 and Privacy Policy.
@@ -83,9 +89,9 @@
                                     <label>Enter Password</label>
                                 </div>
                             </form>
-                            <button class="submit-btn" onclick=changeModal() id="switch-to-signUp">Not Register? Sign Up
+                            <button style="font-size: 12px;" class="submit-btn" onclick=changeModal() id="switch-to-signUp">Not Register? Sign Up
                                 Here </button>
-                            <input class="submit-btn" type="submit" value="Log in" id="signup" onclick=checkDetails() />
+                            <input style="margin-bottom: 20px;" class="submit-btn" type="submit" value="Log in" id="signup" onclick=checkDetails() />
                             <p id="terms-conditions">
                                 By continuing, I accept TCP-bigbasket’s Terms and Conditions
                                 and Privacy Policy.
@@ -100,8 +106,8 @@
                                             <i class="fa-solid fa-face-smile"></i>
                                         </div>
                                         <div class="logo-text">
-                                            <h3>Quality</h3>
-                                            <p>You can trust</p>
+                                            <h3 id="quality-h3">Quality</h3>
+                                            <p id="quality-p">You can trust</p>
                                         </div>
                                     </div>
                                     <div class="quality-box">
@@ -110,15 +116,15 @@
                                             <i class="fa-solid fa-arrow-rotate-left"></i>
                                         </div>
                                         <div class="logo-text">
-                                            <h3>Return Policy</h3>
-                                            <p>No questions asked</p>
+                                            <h3 id="quality-h3">Return Policy</h3>
+                                            <p id="quality-p">No questions asked</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <hr />
                             <div class="app-links">
-                                <p>Shopping at fingertips!! Download our app</p>
+                                <p style="margin-bottom: 10px;">Shopping at fingertips!! Download our app</p>
                                 <a href=""><i class="fa-brands fa-google-play"></i></a>
                                 <a href=""><i class="fa-brands fa-apple"></i></a>
                             </div>

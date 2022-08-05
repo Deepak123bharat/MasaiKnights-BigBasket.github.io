@@ -5,8 +5,8 @@ var dairyArr = [
         brand:"Fresho",
         name : "Farm Eggs - Table Tray, Medium, Antibiotic Residue-Free",
         Quantity : "12 pcs",
-        price : "Rs 79.40",
-        strikedOdprice : "Rs 110.60"
+        price : " 79.40",
+        strikedOdprice : " 110.60"
 
     },
     {
@@ -15,8 +15,8 @@ var dairyArr = [
         brand:"Fresho",
         name : "Eggs - Regular",
         Quantity : "2X6 pcs",
-        price : "Rs 72.90",
-        strikedOdprice : "Rs 80.00"
+        price : " 72.90",
+        strikedOdprice : " 80.00"
 
     },
     
@@ -25,8 +25,8 @@ var dairyArr = [
         brand:"Fresho",
         name : "Chicken - Curry Cut Without Skin, Antibiotic Residue-Free, 6 To 9 Pcs",
         Quantity : "250 g",
-        price : "Rs 190",
-        strikedOdprice : "Rs 226"
+        price : " 190",
+        strikedOdprice : " 226"
 
     },
     {
@@ -34,8 +34,8 @@ var dairyArr = [
         brand:"Fresho",
         name : "Fresho Farm Eggs Medium 30 pcs + Kara Coconut Milk UHT Classic, Imported 200 ml",
         Quantity : "2 item",
-        price : "Rs 254",
-        strikedOdprice : "Rs 285"
+        price : " 254",
+        strikedOdprice : " 285"
 
     },
     {
@@ -43,8 +43,8 @@ var dairyArr = [
         brand:"bb Combo",
         name : "Chicken Breast - Boneless, Antibiotic Residue-Free, 2- 4 pcs",
         Quantity : "500 g",
-        price : "Rs 259",
-        strikedOdprice : "Rs 360"
+        price : " 259",
+        strikedOdprice : " 360"
 
     },
     {
@@ -53,8 +53,8 @@ var dairyArr = [
         brand:"Fresho",
         name : "Chicken Curry Cut Without Skin 500 g + Chicken Breast - Boneless 500 g",
         Quantity : " 2 item",
-        price : "Rs 448",
-        strikedOdprice : "Rs 500"
+        price : "448",
+        strikedOdprice : " 500"
 
     },
     {
@@ -62,8 +62,8 @@ var dairyArr = [
         brand:"Fresho", 
         name : "Chicken 1 kg + BB Royal Biryani Basmati Rice - Extra Long 1 kg Pouch",
         Quantity : "2 items",
-        price : "Rs 435",
-        strikedOdprice : "Rs 605"
+        price : "435",
+        strikedOdprice : " 605"
 
     },
 ]
