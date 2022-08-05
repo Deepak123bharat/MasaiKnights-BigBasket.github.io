@@ -37,8 +37,24 @@ function getDetails(){
         number: NUMBER,
         password:PASSWORD
         }
-        if(signupObj.number.length<10){
-            alert("Number Not Valid");
+        if(NAME =="" || EMAIL == "" || NUMBER == "" || PASSWORD == ""){
+            var alertDiv = document.createElement("div");
+            var popupText = document.createElement("p");
+            popupText.style.padding="2px";
+            popupText.style.backgroundColor="red";
+            popupText.style.color="white";
+            popupText.style.fontSize="12px"
+            popupText.innerText="Please Fill All Details"
+            alertDiv.append(popupText);
+            alertDiv.style.position="absolute";
+            alertDiv.style.top="85%";
+            alertDiv.style.left="35%";
+            
+            document.querySelector(".box").append(alertDiv);
+            setTimeout(function closeAlert(){
+                alertDiv.remove();
+            },3000)
+
             return;
         }
         signupData.push(signupObj);
@@ -47,6 +63,23 @@ function getDetails(){
         document.getElementById("signup-email").value=""
         NUMBER = document.getElementById("number").value=""
         PASSWORD = document.getElementById("signup-password").value=""
+        var alertDiv = document.createElement("div");
+            var popupText = document.createElement("p");
+            popupText.style.padding="2px";
+            popupText.style.backgroundColor="green";
+            popupText.style.color="white";
+            popupText.style.fontSize="12px"
+            popupText.innerText="Account Created"
+            alertDiv.append(popupText);
+            alertDiv.style.position="absolute";
+            alertDiv.style.top="85%";
+            alertDiv.style.left="37%";
+            
+            document.querySelector(".box").append(alertDiv);
+            setTimeout(function closeAlert(){
+                alertDiv.remove();
+            },3000)
+        
     }
     function checkDetails(){
         var EMAIL =document.getElementById("login-email").value;
@@ -55,8 +88,27 @@ function getDetails(){
         if(elem.email==EMAIL && elem.password==PASSWORD){
             document.querySelector("h1").innerText=elem.name;
             closepopup();
+            return;
         }
         })
+        var alertDiv = document.createElement("div");
+            var popupText = document.createElement("p");
+            popupText.style.padding="2px";
+            popupText.style.backgroundColor="red";
+            popupText.style.color="white";
+            popupText.style.fontSize="12px"
+            popupText.innerText="Wrong Credentials"
+            alertDiv.append(popupText);
+            alertDiv.style.position="absolute";
+            alertDiv.style.top="85%";
+            alertDiv.style.left="35%";
+            
+            document.querySelector(".box-3").append(alertDiv);
+            setTimeout(function closeAlert(){
+                alertDiv.remove();
+            },3000)
+
+            return;
     }
 //    document.querySelector("#closeBtn").addEventListener("click",(event)=>{
 //         var parent = event.target.parentNode.parentNode
