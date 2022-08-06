@@ -167,6 +167,10 @@ hr {
     width: 60px;
 }
 
+.carousel-indicators{
+    z-index: 1;
+}
+
 /* all footer css  */
 footer {
     width: 80%;
