@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
     <title>Document</title>
-    <link rel="stylesheet" href="./login/login.css">
+    <link rel="stylesheet" href="/login/login.css">
     <style>
 
          /* Login css Start */
@@ -671,6 +671,7 @@
 
 </html>
 <script>
+    document.querySelector("#cart_items").innerText=JSON.parse(localStorage.getItem("cart")).length;
     document.querySelector("#navbar_login").addEventListener("click", () => {
         showLoginTab()
     })
@@ -795,4 +796,4 @@
 
     document.querySelector("#search_item")
 </script>
-<script src="./scripts/login.js"></script>
+<script src="/scripts/login.js"></script>
