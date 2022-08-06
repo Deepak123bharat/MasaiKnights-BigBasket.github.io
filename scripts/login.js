@@ -47,7 +47,7 @@ function getDetails(){
             popupText.innerText="Please Fill All Details"
             alertDiv.append(popupText);
             alertDiv.style.position="absolute";
-            alertDiv.style.top="85%";
+            alertDiv.style.top="83%";
             alertDiv.style.left="35%";
             
             document.querySelector(".box").append(alertDiv);
@@ -57,6 +57,33 @@ function getDetails(){
 
             return;
         }
+        var flag = true;
+       signupData.map(function (elem){
+        if(elem.email == EMAIL || elem.number == NUMBER){
+            var alertDiv = document.createElement("div");
+            var popupText = document.createElement("p");
+            popupText.style.padding="2px";
+            popupText.style.backgroundColor="red";
+            popupText.style.color="white";
+            popupText.style.fontSize="12px"
+            popupText.innerText="User Already Exists"
+            alertDiv.append(popupText);
+            alertDiv.style.position="absolute";
+            alertDiv.style.top="83%";
+            alertDiv.style.left="35%";
+            
+            document.querySelector(".box").append(alertDiv);
+            setTimeout(function closeAlert(){
+                alertDiv.remove();
+            },3000)
+
+            flag =false;
+            return;
+
+        }
+
+       })
+       if(flag == true){
         signupData.push(signupObj);
         localStorage.setItem("signUpList",JSON.stringify(signupData));
         document.getElementById("name").value="";
@@ -72,7 +99,7 @@ function getDetails(){
             popupText.innerText="Account Created"
             alertDiv.append(popupText);
             alertDiv.style.position="absolute";
-            alertDiv.style.top="85%";
+            alertDiv.style.top="83%";
             alertDiv.style.left="37%";
             
             document.querySelector(".box").append(alertDiv);
@@ -80,14 +107,19 @@ function getDetails(){
                 alertDiv.remove();
             },3000)
         
+       }
+        
+        
+        
     }
     function checkDetails(){
         var EMAIL =document.getElementById("login-email").value;
         var PASSWORD= document.getElementById("login-password").value;
         signupData.map(function(elem){
         if(elem.email==EMAIL && elem.password==PASSWORD){
-            document.querySelector("h1").innerText=elem.name;
+           
             closepopup();
+            document.querySelector("#navbar_login").innerText=elem.name;
             return;
         }
         })
