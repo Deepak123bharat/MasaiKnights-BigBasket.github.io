@@ -675,7 +675,14 @@
         showLoginTab()
     })
 
-    // document.querySelector("#cart_items").innerText=JSON.parse(localStorage.getItem("cart")).length>0 || "0";
+    if(localStorage.getItem("cart")!=null)
+    {
+        document.querySelector("#cart_items").innerText = JSON.parse(localStorage.getItem("cart")).length
+    }
+    else{
+        document.querySelector("#cart_items").innerText = 0
+    }
+    
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > 100) {
