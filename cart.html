@@ -200,6 +200,26 @@
               text-decoration: none;
           }
 
+          #masai30{
+            display: block;
+            width: 50%;
+            margin: auto;
+            padding-top: 20px;
+          }
+          #masai30 input{
+            font-size: 20px;
+            padding: 3px 5px;
+          }
+          #masai30 button{
+            font-size: 20px;
+            padding: 3px 10px;
+            border: none;
+            color: white;
+            background-color: chocolate;
+            border-radius: 8px;
+            cursor: pointer;
+          }
+
           /* <---------------------foooter---------------------------> */
             #footer{
               width:70%;
@@ -348,6 +368,13 @@
               
           </tbody>
         </table>
+
+        <form action="" id="masai30">
+          <input id="valmasai30" type="text">
+          <button type="submit">Apply</button>
+       </form>
+
+
         <button id="empty">
           <i class="fa-solid fa-basket-shopping"></i>
           EMPTY BASKET
@@ -378,7 +405,7 @@
         <style>
          
         </style>
-
+       
           <div id="second">
             <h1>TOTAL</h1>
              <span id="total"> Rs. &ensp;    </span>
@@ -534,6 +561,26 @@
         var cartVal = document.createElement("h4");
         cartVal.innerText = total;
         document.querySelector("#total").append(cartVal)
+        
+        var masai = document.getElementById("masai30").addEventListener("submit",getValue);
+        function getValue(){
+            event.preventDefault();
+            var  val = document.getElementById("valmasai30").value;
+            console.log(val);
+            if(val == "masai"){
+               cartVal.innerText =  (88/100)*total;
+            //    document.querySelector("body").append(cartVal)
+                document.querySelector(".total").append(cartVal)
+                console.log(total)
+             }
+            else{
+                cartVal.innerText =  total;
+                // document.querySelector("body").append(cartVal)
+                document.querySelector(".total").append(cartVal)
+                console.log(total)
+                document.getElementById("valmasai30").value =" ";
+            }
+        }
         document.querySelector("#total").style.fontSize = "23px";
         console.log(total)
     }
