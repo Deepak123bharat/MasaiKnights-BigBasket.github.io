@@ -462,10 +462,10 @@
                     </div>
                     <div id="navbar_middle">
                         <div id="imgAndshop">
-                            <a href="./index.html" style="opacity: 1;"><img id="logoImg"
+                            <a href="/index.html" style="opacity: 1;">
+                            <img id="logoImg"
                                 src="https://github.com/Deepak123bharat/MasaiknightsBigbasket/blob/main/images/logos/logo.png?raw=true"
-                                 /></a>
-                            
+                                alt="" /></a>
                         </div>
 
                         <div id="search_item">
@@ -671,10 +671,11 @@
 
 </html>
 <script>
-    document.querySelector("#cart_items").innerText=JSON.parse(localStorage.getItem("cart")).length;
     document.querySelector("#navbar_login").addEventListener("click", () => {
         showLoginTab()
     })
+
+    // document.querySelector("#cart_items").innerText=JSON.parse(localStorage.getItem("cart")).length>0 || "0";
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > 100) {
