@@ -534,6 +534,19 @@ function displayProducts(data) {
     div3.setAttribute("class", "image-div");
     var image = document.createElement("img");
     image.setAttribute("src", elem.image_adress);
+    image.addEventListener("click", (ele)=>{
+        var title = document.querySelector(".products-cards > div> div> h6").innerText
+        var price = document.querySelector(".products-cards > div> div> span > span:last-child").innerText
+        var desc = document.querySelector(".products-cards > div> div> a").innerText
+        var descriptionObject = {
+            "imgscr" : elem.image_adress,
+            "title" : title,
+            "price" : price,
+            "desc" : desc,
+        }
+        localStorage.setItem("productDescription", JSON.stringify(descriptionObject))
+        window.location.href = "./../../description.html"
+    })
     div3.append(image);
     var div4 = document.createElement("div");
     var brand = document.createElement("h6");
