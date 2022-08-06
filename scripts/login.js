@@ -107,10 +107,7 @@ function getDetails(){
                 alertDiv.remove();
             },3000)
         
-       }
-        
-        
-        
+       }   
     }
     function checkDetails(){
         var EMAIL =document.getElementById("login-email").value;
