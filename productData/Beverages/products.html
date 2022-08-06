@@ -4,24 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="./../products.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
-<<<<<<<< HEAD:productData/eggs/products.html
-    <title>  Eggs, Meat & Fish</title>
-========
+
+    
     <title>
       Beverages</title>
->>>>>>>> e9b1f5b4e391b4e4f7842c9399a445c8a3d9b641:productData/Beverages/products.html
+
     
     <script
       src="https://kit.fontawesome.com/b678f324bd.js"
       crossorigin="anonymous"
     ></script>
-  </head>
-  <body>
-    <section class="main-container">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+      $(function(){
+        $("#includedContent").load("./../../navbar.html"); 
+      });
+    </script> 
+</head>
+
+<body>
+<div id="includedContent"></div>
+    <section class="main-products">
       <div class="filters-section">
         
         <div class="brand-filter">
@@ -94,12 +101,10 @@
       </div>
 
       <div class="products-container">
-<<<<<<<< HEAD:productData/eggs/products.html
-        <div class="products-heading"><h2 id="title">   Eggs, Meat & Fish</h2></div>
-========
+
         <div class="products-heading"><h2 id="title">
           Beverages</h2></div>
->>>>>>>> e9b1f5b4e391b4e4f7842c9399a445c8a3d9b641:productData/Beverages/products.html
+
         <div class="sort-bar"> <select  id="sort-bar">
             <option value="">Popularity</option>
             <option value="">Price - Low to High </option>

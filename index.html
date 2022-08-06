@@ -21,214 +21,19 @@
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="login/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+        $(function(){
+        $("#includedContent").load("navbar.html"); 
+        });
+    </script> 
 </head>
 
 <body>
-    <header>
-        <div id="upnav">
-            <div id="navbar">
-                <div id="navbarsub">
-                    <div id="navbar_top">
-                        <div class="navbar_contact_info"><img style="width: 20px; height: 20px; margin-bottom: -5px;"
-                                src="./icons/navbar/phone.png">1860 123 1000 </div>
-                        <div class="navbar_contact_info"><img style="width: 20px; height: 20px; margin-bottom: -5px;"
-                                src="./icons/navbar/location.png">560004, bangalore</div>
-                        <div class="navbar_contact_info"><img style="width: 20px; height: 20px; margin-bottom: -5px;"
-                                src="./icons/navbar/user.png"><span id="navbar_login">Log In/Sign Up</span></div>
-                        <span id="showname"></span>
-                    </div> 
-                    <div id="navbar_middle">
-                        <div id="imgAndshop">
-                            <img id="logoImg" src="./images/logos/logo.png" alt="" />
-                        </div>
-                        
-                        <div id="search_item">
-                            <input type="text" name="" placeholder="Search for products..." id="" />
-                            <div style="margin-bottom: -2px;" id="mfglass"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        </div>
-                        <div id="cart">
-                            <div id="cart_img">
-                                <img src="./images/basket.png" alt="" />
-                            </div>
-                            <div id="cart_qunt">
-                                <p>My Basket</p>
-                                <br>
-                                <p><span id="cart_items">0</span> Item</p>
-                            </div>
-                        </div>       
-                    </div>
-                    <div id="navbar_bottom">
-                        <div class="navbar_bottom_first">
-            
-                            <!-- -------- Dropdown ----------- -->
-                            <div class="category">
-                                <p>SHOP BY CATEGORY <i class="fa-solid fa-chevron-down"></i></p>
-            
-                                <!-- <span>Categories</span> -->
-                                <!-- <div class="category-arrow"></div> -->
-            
-                                <div class="category-hover-div" id="category-hover-div">
-                                    <div class="category-hover-div-left">
-                                        <div class="category-hover-div-left-options">
-                                            Fruits &amp; Vegetables
-                                        </div>
-                                        <div class="category-hover-div-left-options foodgrains_option">
-                                            Foodgrains, Oil &amp; Masala
-                                        </div>
-                                        <div class="category-hover-div-left-options">
-                                            <a href="productData/products.html">Bakery Cakes & Dairy</a>
-                                        </div>
-                                        <div class="category-hover-div-left-options">Beverages</div>
-                                        <div class="category-hover-div-left-options">Snacks &amp; Branded Foods</div>
-                                        <div class="category-hover-div-left-options">Beauty & Hygiene</div>
-                                        <div class="category-hover-div-left-options">Cleaning &amp; Household</div>
-                                        <div class="category-hover-div-left-options">Kitchen, Garden &amp; Pets</div>
-                                        <div class="category-hover-div-left-options">Eggs, Meats &amp; Fish</div>
-                                        <div class="category-hover-div-left-options">Gourmet &amp; World Food</div>
-                                        <div class="category-hover-div-left-options">Baby Care</div>
-                                        <div class="category-hover-div-left-options">View All</div>
-                                    </div>
-            
-                                    <!-- /////////////right////////// -->
-                                    <div class="category-hover-div-right">
-                                        <div id="fruits-vegetables">
-                                            <a href="../product page/product.html">
-                                                Fresh Vegetables
-                                            </a><br>
-                                            <a href="">
-                                                Herbs & Seasonings
-                                            </a><br>
-                                            <a href="">
-                                                Fresh Fruits
-                                            </a><br>
-                                            <a href="">Organic Fruits & Vegetables</a><br>
-                                            <a href="">Cuts & Sprouts</a><br>
-                                            <a href="">Exotic Fruits & Veggies</a><br>
-                                            <a href="">Flower Bouquets, Bunches</a><br>
-                                        </div>
-                                               
-            
-                                    </div>
-                                </div>
-            
-                            </div>
-                            <div id="offers">
-                                <p><img src="./icons/bg icon/offer.svg" alt="" srcset="">OFFERS</p>
-                            </div>
-                            <div>
-                                <p><img src="./icons/bg icon/bike.svg" alt="" srcset=""> BB EXPRESS</p>
-                            </div>
-                            <div>
-                                <p><img src="./icons/bg icon/home.svg" alt="" srcset="">BB SPECIALTY</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-    </header>
-    <main>
-        <!-- Login Sign Up Start -->
-        <div id="nav_space">
 
-        </div>
-        <div class="modal-bg" style="line-height: 1;">
-            <div class="main-container">
-                <div class="child-container">
-                    <div class="final-container">
-                        <i id="closeBtn" class="fa-solid fa-circle-xmark" onclick=closepopup()></i>
-                        <div class="box">
-                            <form>
-                                <h2 class="text-center">Sign Up</h2>
-                                <div class="input-container">
-                                    <input type="text" id="name" required="" />
-                                    <label>Enter Name</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="email" id="signup-email" required="" />
-                                    <label>Enter Email</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="number" id="number" required="" />
-                                    <label>Enter Mobile Number (10 Digit)</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="password" id="signup-password" required="" />
-                                    <label>Set Password</label>
-                                </div>
-                            </form>
-                            <button  style="font-size: 12px;" class="submit-btn" id="switch-to-login" onclick=changeModal()>Already Registered?
-                                Login Here</button>
-                            <input style="margin-bottom: 20px;" class="submit-btn" type="submit" value="Sign Up" id="signup" onclick=getDetails() />
-                            <p id="terms-conditions">
-                                By continuing, I accept TCP-bigbasket’s Terms and Conditions
-                                and Privacy Policy.
-                            </p>
-
-                        </div>
-                        <div class="box-3">
-                            <form>
-                                <h2 class="text-center">login</h2>
-
-                                <div class="input-container">
-                                    <input type="email" id="login-email" required="" />
-                                    <label>Enter Email</label>
-                                </div>
-
-                                <div class="input-container">
-                                    <input type="password" id="login-password" required="" />
-                                    <label>Enter Password</label>
-                                </div>
-                            </form>
-                            <button style="font-size: 12px;" class="submit-btn" onclick=changeModal() id="switch-to-signUp">Not Register? Sign Up
-                                Here </button>
-                            <input style="margin-bottom: 20px;" class="submit-btn" type="submit" value="Log in" id="signup" onclick=checkDetails() />
-                            <p id="terms-conditions">
-                                By continuing, I accept TCP-bigbasket’s Terms and Conditions
-                                and Privacy Policy.
-                            </p>
-
-                        </div>
-                        <div class="box-2">
-                            <div class="homepage-link">
-                                <a href="">
-                                    <div class="quality-box">
-                                        <div class="logo">
-                                            <i class="fa-solid fa-face-smile"></i>
-                                        </div>
-                                        <div class="logo-text">
-                                            <h3 id="quality-h3">Quality</h3>
-                                            <p id="quality-p">You can trust</p>
-                                        </div>
-                                    </div>
-                                    <div class="quality-box">
-                                        <div class="logo">
-
-                                            <i class="fa-solid fa-arrow-rotate-left"></i>
-                                        </div>
-                                        <div class="logo-text">
-                                            <h3 id="quality-h3">Return Policy</h3>
-                                            <p id="quality-p">No questions asked</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <hr />
-                            <div class="app-links">
-                                <p style="margin-bottom: 10px;">Shopping at fingertips!! Download our app</p>
-                                <a href=""><i class="fa-brands fa-google-play"></i></a>
-                                <a href=""><i class="fa-brands fa-apple"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Login SignUp End  -->
+    
+    <div id="includedContent"></div>
 
         <!-- top pages -->
         <div id="carouselExampleCaptions" class="carousel slide defineZIndex" data-bs-ride="carousel">
@@ -252,7 +57,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="//www.bigbasket.com/media/uploads/banner_images/HP_EMF_M_T1-1600x460_220729-week-end-T1.jpg"
-                        class="d-block w-100" alt="...">
+                        class="d-block w-100" alt="..." style="border: none;">
 
                 </div>
                 <div class="carousel-item">
@@ -918,7 +723,6 @@
     });
 
 </Script>
-<script src="./scripts/login.js"></script>
 <script src="./scripts/main.js"></script>
 
 </html>

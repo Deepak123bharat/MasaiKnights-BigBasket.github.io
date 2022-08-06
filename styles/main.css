@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: #000;
+  
 }
 
 .topBt {
@@ -164,6 +165,10 @@ hr {
 .carousel-indicators [data-bs-target] {
     background-color: green;
     width: 60px;
+}
+
+.carousel-indicators{
+    z-index: 1;
 }
 
 /* all footer css  */

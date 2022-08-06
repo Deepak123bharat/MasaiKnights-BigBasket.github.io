@@ -4,8 +4,8 @@ var vegetableArr = [
         name : "Potato ",
         brand: "Fresho",
         Quantity : "5 Kg",
-        price : "Rs 105.40",
-        strikedOdprice : "Rs 167.60"
+        price : "105.40",
+        strikedOdprice : "167.60"
 
     },
     {
@@ -13,8 +13,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Beetroot",
         Quantity : "1 Kg",
-        price : "Rs 84",
-        strikedOdprice : "Rs 105"
+        price : "84",
+        strikedOdprice : "105"
 
     },
     
@@ -23,8 +23,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Bitter Gourd",
         Quantity : "1 Kg",
-        price : "Rs 64",
-        strikedOdprice : "Rs 89"
+        price : "64",
+        strikedOdprice : "89"
 
     },
     {
@@ -32,8 +32,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Coccinia",
         Quantity : "500 g",
-        price : "Rs 54",
-        strikedOdprice : "Rs 68"
+        price : "54",
+        strikedOdprice : "68"
 
     },
     {
@@ -41,8 +41,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Ladies Finger",
         Quantity : "250 g",
-        price : "Rs 18",
-        strikedOdprice : "Rs 40"
+        price : "18",
+        strikedOdprice : "40"
 
     },
     {
@@ -50,8 +50,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Onion",
         Quantity : "5 kg",
-        price : "Rs 101",
-        strikedOdprice : "Rs 181.25"
+        price : "101",
+        strikedOdprice : "181.25"
 
     },
     {
@@ -59,8 +59,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Pumpkin - Green",
         Quantity : "1 kg",
-        price : "Rs 37",
-        strikedOdprice : "Rs 54"
+        price : "37",
+        strikedOdprice : "54"
 
     },
     {
@@ -68,8 +68,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Tomato Hybrid/Tameta",
         Quantity : "1 kg",
-        price : "Rs 41",
-        strikedOdprice : "Rs 64"
+        price : "41",
+        strikedOdprice : "64"
 
     },
     {
@@ -77,8 +77,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Garlic - Ginger",
         Quantity : "1 pack(200g)",
-        price : "Rs 44",
-        strikedOdprice : "Rs 55"
+        price : "44",
+        strikedOdprice : "55"
 
     },
     {
@@ -86,8 +86,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Coriander Leaves",
         Quantity : "1 Kg",
-        price : "Rs 493",
-        strikedOdprice : "Rs 616"
+        price : "493",
+        strikedOdprice : "616"
 
     },
     {
@@ -95,8 +95,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Parwal",
         Quantity : "500 g",
-        price : "Rs 61",
-        strikedOdprice : "Rs 76"
+        price : "61",
+        strikedOdprice : "R76"
 
     },
     {
@@ -104,8 +104,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Brinjal - Nagpur",
         Quantity : "1 Kg",
-        price : "Rs 73",
-        strikedOdprice : "Rs 91"
+        price : "73",
+        strikedOdprice : "91"
 
     },
     {
@@ -113,8 +113,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Bottle Gourd",
         Quantity : "1 pc (500 g - 800 g)",
-        price : "Rs 40",
-        strikedOdprice : "Rs 60"
+        price : "40",
+        strikedOdprice : "60"
 
     },
     {
@@ -122,8 +122,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Sponge Gourd",
         Quantity : "1 Kg",
-        price : "Rs 96",
-        strikedOdprice : "Rs 120"
+        price : "96",
+        strikedOdprice : "120"
 
     },
     {
@@ -131,8 +131,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Beetroot/Beet",
         Quantity : "1 Kg",
-        price : "Rs 84",
-        strikedOdprice : "Rs 105"
+        price : "84",
+        strikedOdprice : "105"
 
     },
     {
@@ -140,8 +140,8 @@ var vegetableArr = [
         brand: "Fresho",
         name : "Cabbage",
         Quantity : "1 pc(350 g - 500 g",
-        price : "Rs 55",
-        strikedOdprice : "Rs 68"
+        price : "55",
+        strikedOdprice : "68"
 
     }
 ]
@@ -220,7 +220,7 @@ function sortPriceLowtoHigh(data){
 var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(index){
     
-    var product = dairyArr.filter(function(elem,i){
+    var product = vegetableArr.filter(function(elem,i){
         return index==i;
     })
     cartArr.push(product[0]);
