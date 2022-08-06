@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body{
-	font-family:Arial, Helvetica, sans-serif;  
+	font-family:Arial, Helvetica, sans-serif;
+    margin: 0;  
 }
 .modal-bg{
     width: 100%;
@@ -22,7 +23,7 @@ body{
   position: relative;
   display: block;
 
-  left: 14%;
+  left: 13%;
   width: 280px;
   height: 437px;
   margin:  114px auto ;
