@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
     <title>Document</title>
-    <link rel="stylesheet" href="/login/login.css">
+    <link rel="stylesheet" href="login/login.css">
     <style>
 
          /* Login css Start */
@@ -48,7 +48,7 @@
         #navbar_top {
             display: flex;
             justify-content: end;
-            gap: 3%;
+            gap: 2%;
         }
 
         #navbar_middle {
@@ -174,7 +174,6 @@
             background-color: #72A020;
         }
         #offers{
-            width: 25%;
             padding: 5px 5px 0 10px;
         }
         
@@ -197,7 +196,8 @@
 
         .category> div > p {
             color: white;
-            font-size: medium;
+            font-size: 14px;
+            /* height: 100%; */
             background-color: #84c225;
         }
 
@@ -347,10 +347,11 @@
             background-color: white;
         }
 
-        @media all and (min-width:400px) and (max-width : 1200px){
-            #category_dropdown > p{
-                font-size: small;
+        @media all and (min-width:480px) and (max-width:1100px) {
+            .category> div > p {
+                font-size: 11px;
             }
+
         }
         /* ////////////navbar done//////// */
 
@@ -469,7 +470,7 @@
         }
         #hover-green>i, span{
             color: gray;
-
+            /* width: 10%; */
         }
 
         /*-------------- Navbar css End -----------------*/
@@ -710,6 +711,7 @@
         showLoginTab()
     })
 
+    // Add item to cart from local storage
     if(localStorage.getItem("cart")!=null)
     {
         document.querySelector("#cart_items").innerText = JSON.parse(localStorage.getItem("cart")).length
@@ -768,7 +770,7 @@
     var height = document.getElementById("navbar").offsetHeight
 
     document.getElementById("cart").addEventListener("click", () => {
-        window.location.href = "/cart.html"
+        window.location.href = "cart.html"
     })
 
 
@@ -776,6 +778,7 @@
 
     //Shop by category arr 
     var arr = ["Fresh Vegetables", "Herbs & Seasonings", "Fresh Fruits", "Organic Fruits & Vegetables", "Cuts & Sprouts", "Exotic Fruits & Veggies", "Flower Bouquets, Bunches"]
+    var linksArr = ["/productData/Vegetables/products.html", "/productData/Dairy/products.html", "/productData/Vegetables/products.html", "/productData/cleaning/products.html", "/productData/Beverages/products.html", "/productData/Beverages/products.html", "/productData/Kitchen/products.html"]
 
     var items = shuffle(arr)
     var div = document.querySelector(".category-hover-div")
@@ -786,30 +789,30 @@
             var div2 = document.querySelector(".category-hover-div-2")
             div2.innerHTML = ""
             arr = shuffle(arr)
-            arr.forEach(element => {
+            arr.forEach((element, index) => {
                 var it = document.createElement("div")
                 it.className = "category-hover-div-2-options"
-                it.innerText = element
+                it.innerHTML = `<a href="`+linksArr[index]+`">`+element+`</a>`
                 div2.append(it)
             });
 
             var div3 = document.querySelector(".category-hover-div-3")
             div3.innerHTML = ""
             arr = shuffle(arr)
-            arr.forEach(element => {
+            arr.forEach((element, index) => {
                 var it = document.createElement("div")
                 it.className = "category-hover-div-3-options"
-                it.innerText = element
+                it.innerHTML = `<a href="`+linksArr[index]+`">`+element+`</a>`
                 div3.append(it)
             });
 
             var div4 = document.querySelector(".category-hover-div-4")
             div4.innerHTML = ""
             arr = shuffle(arr)
-            arr.forEach(element => {
+            arr.forEach((element, index) => {
                 var it = document.createElement("div")
                 it.className = "category-hover-div-4-options"
-                it.innerText = element
+                it.innerHTML = `<a href="`+linksArr[index]+`">`+element+`</a>`
                 div4.append(it)
             });
 
