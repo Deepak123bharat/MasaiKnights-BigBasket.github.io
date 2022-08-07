@@ -1345,4 +1345,11 @@ var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(obj) {
   cartArr.push(obj);
   localStorage.setItem("cart", JSON.stringify(cartArr));
+  if(localStorage.getItem("cart")!=null)
+    {
+        document.querySelector("#cart_items").innerText = JSON.parse(localStorage.getItem("cart")).length
+    }
+    else{
+        document.querySelector("#cart_items").innerText = 0
+    }
 }
