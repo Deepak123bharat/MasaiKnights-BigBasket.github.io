@@ -200,6 +200,26 @@
               text-decoration: none;
           }
 
+          #masai30{
+            display: block;
+            width: 50%;
+            margin: auto;
+            padding-top: 20px;
+          }
+          #masai30 input{
+            font-size: 20px;
+            padding: 3px 5px;
+          }
+          #masai30 button{
+            font-size: 20px;
+            padding: 3px 10px;
+            border: none;
+            color: white;
+            background-color: chocolate;
+            border-radius: 8px;
+            cursor: pointer;
+          }
+
           /* <---------------------foooter---------------------------> */
             #footer{
               width:70%;
@@ -230,11 +250,12 @@
             }
             .parent2 {
             height: 300px;
-            width: 100%;
+            width: 80%;
             /* border: 1px solid red; */
             display: grid;
             grid-template-rows: repeat(4, 1fr);
             gap: 20px;
+            margin: auto;
 
             }
             .parent2 > .child2{
@@ -348,6 +369,13 @@
               
           </tbody>
         </table>
+
+        <form action="" id="masai30">
+          <input id="valmasai30" type="text" placeholder="Apply voucher">
+          <button type="submit">Apply</button>
+       </form>
+
+
         <button id="empty">
           <i class="fa-solid fa-basket-shopping"></i>
           EMPTY BASKET
@@ -367,18 +395,18 @@
           <div id="first">
             <div>
               <p>Subtotal</p>
-              <span id="Subtotal">Rs. &ensp;</span>
+              <span id="Subtotal">Rs. &ensp; </span>
             </div>
             <div>
-              <p>Delivery Charges</p>
-              <p>**</p>
+              <p> Apply voucher <b>masai</b>  </p>
+              <p>12% Discount</p>
             </div>
           </div>
           <hr />
         <style>
          
         </style>
-
+       
           <div id="second">
             <h1>TOTAL</h1>
              <span id="total"> Rs. &ensp;    </span>
@@ -435,9 +463,9 @@
         </div>
 
     </div>
-    <div class="homePage">
+    <!-- <div class="homePage">
         <a href="index.html"><button>CONTINUE SHOPING</button></a>
-    </div>
+    </div> -->
     
 
         <br>
@@ -525,11 +553,6 @@
     }
      
 
-    // function removeData(){
-    //     event.target.parentNode.remove();
-    // }
-
-
 
     function cartVal(){
         var total = products.reduce(function(acc,elem){
@@ -539,10 +562,27 @@
         var cartVal = document.createElement("h4");
         cartVal.innerText = total;
         document.querySelector("#total").append(cartVal)
-        // document.querySelector("#Subtotal").append(cartVal)
+        
+        var masai = document.getElementById("masai30").addEventListener("submit",getValue);
+        function getValue(){
+            event.preventDefault();
+            var  val = document.getElementById("valmasai30").value;
+            console.log(val);
+            if(val == "masai"){
+               cartVal.innerText =  (88/100)*total;
+            //    document.querySelector("body").append(cartVal)
+                document.querySelector(".total").append(cartVal)
+                console.log(total)
+             }
+            else{
+                cartVal.innerText =  total;
+                // document.querySelector("body").append(cartVal)
+                document.querySelector(".total").append(cartVal)
+                console.log(total)
+            }
+        }
         document.querySelector("#total").style.fontSize = "23px";
         console.log(total)
-        // document.querySelector("#Subtotal").append(cartVal)
     }
 
     function subVal(){
@@ -555,11 +595,8 @@
        
         var cartVal = document.createElement("h4");
         cartVal.innerText = total;
-        // document.querySelector("#total").append(cartVal)
         document.querySelector("#Subtotal").append(cartVal)
-        // document.querySelector("#total").style.fontSize = "23px";
         console.log(total)
-        // document.querySelector("#Subtotal").append(cartVal)
     }
 
           function removeData(index){
