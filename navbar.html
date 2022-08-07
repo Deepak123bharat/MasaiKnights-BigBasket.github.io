@@ -115,6 +115,7 @@
             line-height: 10px;
             /* justify-content: baseline; */
             text-align: center;
+            font-size: large;
         }
 
 
@@ -346,6 +347,11 @@
             background-color: white;
         }
 
+        @media all and (min-width:400px) and (max-width : 1200px){
+            #category_dropdown > p{
+                font-size: small;
+            }
+        }
         /* ////////////navbar done//////// */
 
         /* image sliding  start */
@@ -828,6 +834,9 @@
         return array;
     }
 
-    document.querySelector("#search_item")
+    document.querySelector("#cart").addEventListener("click", () => {
+        window.location.href = "/cart.html"
+    })
+
 </script>
 <script src="/scripts/login.js"></script>
