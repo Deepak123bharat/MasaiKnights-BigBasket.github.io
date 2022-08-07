@@ -631,7 +631,7 @@
                                         <label>Enter Mobile Number (10 Digit)</label>
                                     </div>
                                     <div class="input-container">
-                                        <input type="password" id="signup-password" required="" />
+                                        <input type="password" id="signup-password" autocomplete="on" />
                                         <label>Set Password</label>
                                     </div>
                                 </form>
@@ -841,5 +841,22 @@
         window.location.href = "/cart.html"
     })
 
+    //search functionality
+    document.querySelector("#mfglass").addEventListener("click", ()=>{
+        var searchTarget = document.querySelector("#search_item > input").value 
+        localStorage.setItem("searchTarget", searchTarget)
+        window.location.href = "search.html"
+    })
+
+    // search when enter is pressed
+    document.querySelector("#search_item > input").addEventListener("keypress", (event)=>{
+        if(event.key==="Enter")
+        {
+            var searchTarget = document.querySelector("#search_item > input").value 
+            localStorage.setItem("searchTarget", searchTarget)
+            window.location.href = "search.html"
+        }
+    })
+
 </script>
-<script src="/scripts/login.js"></script>
+<script src="scripts/login.js"></script>

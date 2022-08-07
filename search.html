@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../products.css">
+    <!-- <link rel="stylesheet" href="./../products.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
@@ -127,7 +127,7 @@
 </body>
 
 </html>
-<script src="/productData/pro.js"></script>
+<script src="productData/pro.js"></script>
 <script>
     var allProductArr = []
     allProducts.beautyArr.forEach((element)=>{
@@ -157,19 +157,15 @@
     allProducts.vegetableArr.forEach((element)=>{
         allProductArr.push(element)
     })
-
     document.querySelector("#title").innerText += " (" + allProductArr.length + ")";
 
-    console.log(document.querySelector("#cart"))
-    document.querySelector("#mfglass").addEventListener("click",()=>{
-        var searchTarget = document.querySelector("#search_item > input").value
-        console.log(searchTarget+" thi sis ssearch target")
-    })
+    var searchTarget = localStorage.getItem("searchTarget")
+    localStorage.removeItem("searchTarget")
     allProductArr = allProductArr.filter((value)=>{
-        var str = value.name
-        return str.includes("")
+        var str = value.name.toLowerCase()
+        if(str.includes(searchTarget.toLowerCase()))
+            return value
     })
-    console.log(allProductArr)
     var checkboxArr = document
         .querySelectorAll(".checkbox")
 
