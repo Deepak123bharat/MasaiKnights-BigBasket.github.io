@@ -186,6 +186,7 @@ function displayProducts(data){
         span5.innerText="Qty : ";
         var quantity = document.createElement("input");
         quantity.setAttribute("type","number");
+        quantity.defaultValue=1;
         quantity.style.width="60px"
         var button = document.createElement("button");
        

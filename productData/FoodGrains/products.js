@@ -187,9 +187,10 @@ function displayProducts(data){
         deleveryType.innerHTML='<i class="fa-solid fa-truck"></i> Standard Delevery Tomorrow Morning';
         var span4 = document.createElement("span");
         var span5= document.createElement("span");
-        span5.innerText="Qty : ";
+        span5.innerText="Qty :";
         var quantity = document.createElement("input");
         quantity.setAttribute("type","number");
+        quantity.defaultValue=1;
         quantity.style.width="60px"
         var button = document.createElement("button");
        
