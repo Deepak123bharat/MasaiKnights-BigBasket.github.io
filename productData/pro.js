@@ -293,7 +293,7 @@ var allProducts = {
   ],
   cleaningArr: [
     {
-      image_adress: "https://www.bigbasket.com/pd/1207190/harpic-original-disinfectant-toilet-cleaner-liquid-3x1-l/?nc=cl-prod-list&t_pg=l1-cat-cleaning-household&t_p=cl-temp-1&t_s=cl-prod-list&t_pos=3&t_ch=desktop",
+      image_adress: "https://www.bigbasket.com/media/uploads/p/s/1207190_6-harpic-original-disinfectant-toilet-cleaner-liquid.jpg",
       brand: "Harpic",
       name: "Disinfectant Toilet Cleaner Liquid - Originalc",
       Quantity: "1 L",
