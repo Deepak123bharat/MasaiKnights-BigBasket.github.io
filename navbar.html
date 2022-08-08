@@ -746,11 +746,9 @@
                 shopDiv.id = "imgShopId"
                 shopDiv.style.display = "flex"
                 shopDiv.style.alignItems = "flex-end"
-                shopDiv.addEventListener("mouseover", ()=>{
-                    var ok = document.getElementById("category-hover-div")
-                    ok.style.visibility = "visible"
-                    // console.log(ok)
-                })
+                // shopDiv.addEventListener("mouseenter", ()=>{
+                //     document.getElementById("category-hover-div").visibility = "visible"
+                // })
                 var text = document.createElement("p")
                 text.id = "shopText"
                 text.innerHTML = "SHOP <i class=\"fa-solid fa-chevron-down\"></i>"
@@ -919,7 +917,7 @@ mainDiv1.style.marginTop="0"
     mainDiv1.style.right="-1px";
 
     mainDiv1.style.backgroundColor="#eeeeee";
-    innerDiv1.innerText="YOUR CART IS EMPTY"
+    innerDiv1.innerText="Your basket is empty. Start shopping now!"
    
     document.querySelector("#cart").append(mainDiv1)
     }else{
@@ -1004,8 +1002,14 @@ mainDiv.style.marginTop="0"
         priceText.innerText="Rs "+elem.price;
         priceDiv.append(priceText)
         var deleteCartItem = document.createElement("div");
-        var deleteBtn = document.createElement("button");
-        deleteBtn.innerText="X";
+        var deleteBtn = document.createElement("div");
+        deleteBtn.innerHTML=`<i id="closeBtn" class="fa-solid fa-xmark" style="margin:8px" onclick="closepopup()"></i>`;
+        deleteBtn.addEventListener("mouseover", ()=>{
+            deleteBtn.style.color="lightgreen"
+        })
+        deleteBtn.addEventListener("mouseleave", ()=>{
+            deleteBtn.style.color="black"
+        })
         deleteCartItem.append(deleteBtn);
         image.setAttribute("src",elem.image_adress);
         itemsDiv.append(imageDiv,decDiv,priceDiv,deleteCartItem);
@@ -1044,7 +1048,7 @@ mainDiv.style.marginTop="0"
     checkoutbtn.addEventListener("mouseleave",()=>{
         checkoutbtn.style.backgroundColor="#72A020"
     })
-        checkoutbtn.innerText="Checkout & go to Cart"
+        checkoutbtn.innerText="View Basket & Checkout"
         checkoutbtn.addEventListener("click",() =>{
             window.location.href = "cart.html"
         })
