@@ -412,7 +412,7 @@
 
         }
 
-        span {
+        #spanCategory {
             -bottom: 2px solid #84c225;
             color: rgba(34, 34, 34, 0.87);
             display: inline-block;
@@ -502,27 +502,19 @@
             margin: auto;
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+        $(function(){
+        $("#includedContent").load("navbar.html"); 
+        });
+    </script> 
 </head>
 
 <body>
-    <div id="upper">
-        <p>
-            HOME&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;FRUITS &
-            VEGETABLES&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;FRESH
-            VEGETABLES&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;POTATO, ONION &
-            TOMATO&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;FRESHO ONION
-        </p>
-        <div id="icon">
-            <p style="color: #999">Share On</p>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-solid fa-envelope"></i>
-        </div>
-    </div>
-
+    <div id="includedContent"></div>
     <div id="container">
         <div id="first">
-            <span>Category</span>
+            <span id="spanCategory">Category</span>
             <hr />
             <h3>Fruits and Vegetables</h3>
             <a href="">Beans Brinjals & okra</a><br><br />
