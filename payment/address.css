@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
   }
+  #main div input{
+    border: none;
+  }
   .logo {
     margin: 1% 0% 1% 1%;
     /* border: 1px solid red; */
@@ -12,10 +15,18 @@
   }
   #main_div {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 15px;
     width: 90%;
     margin: auto;
+    display: flex;
+  flex-direction: column;
+  margin-left: 10vw;
     /* width: fit-content; */
+  }
+  #includedContent{
+    display: flex;
+    justify-content: center;
+    
   }
   #address_form label {
     color: #979797;
@@ -218,8 +229,8 @@
   #payment_options_main{
     width: 70%;
     height: 100%;
-    border: 1px solid black;
     
+   
   }
   #available_options{
     width: 20%;
@@ -274,9 +285,7 @@
     border-bottom: 1px solid #d5d5d5;
     width: 77%;
   }
-  input{
-    border: none;
-  }
+ 
   #valid{
     border-bottom: 1px solid #d5d5d5;
   }
@@ -289,6 +298,7 @@
     margin-right: 20px;
     margin-bottom: 20px;
     background-color:#f6f6f6;
+    width: 121%;
   }
   #cvv{
     display: flex;

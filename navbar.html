@@ -80,14 +80,13 @@
             /* padding: 0.2%; */
             /* margin: -6px -15px -6px 0; */
             border: 1px solid #f2f2f2;
-            cursor: pointer;
-           
             /* float: right; */
+            cursor: pointer;
         }
+         
         #cart:hover {
             background-color: #eeeeee;
         }
-
         #cart div {
             /* border: 1px solid brown; */
             /* height: min-content; */
@@ -505,7 +504,7 @@
                         </div>
 
                         <div id="sarch_and_cart">
-                            <div id="search_item" >
+                            <div id="search_item" ">
                                 <input style="height: 32px;" type="text" name="" placeholder="Search for products..." id="" />
                                 <div id="mfglass"><i class="fa-solid fa-magnifying-glass"></i>
                                 </div>
@@ -617,7 +616,7 @@
     </header>
             <!-- Login Sign Up Start -->
         
-            <div class="modal-bg" style="line-height: 1; ">
+            <div class="modal-bg" style="line-height: 1;">
 
                 <div class="main-container">
                     <div class="child-container">
@@ -865,7 +864,17 @@
             window.location.href = "search.html"
         }
     })
-document.getElementById("cart").addEventListener("mouseover",showCart);
+
+    
+    //offers click 
+    document.querySelector("#offers").addEventListener("click", ()=>{
+        localStorage.setItem("ShowAllOffers", true)
+        window.location.href = "search.html"
+    })
+
+
+    // cart hover
+    document.getElementById("cart").addEventListener("mouseover",showCart);
 document.getElementById("cart").addEventListener("mouseout",removeCart);
 var mainDiv =  document.createElement("div")
 var innerDiv = document.createElement("div")
@@ -878,44 +887,44 @@ mainDiv.style.marginTop="0"
 
 
 
-    
+
     mainDiv.setAttribute("id","cartPopup")
     mainDiv.style.position="absolute";
     mainDiv.style.width="35vw";
     mainDiv.style.top="47px";
     mainDiv.style.right="-1px";
-   
+
     mainDiv.style.backgroundColor="#eeeeee";
     document.querySelector("#cart").append(mainDiv)
-    
+
     // innerDiv.style.padding="10px";
     var product = JSON.parse(localStorage.getItem("cart"));
     product.map(function (elem){
         var itemsDiv = document.createElement("div")
-        
+
         itemsDiv.style.marginTop="0"
         itemsDiv.style.marginBottom="8px"
         itemsDiv.style.backgroundColor="white"
         itemsDiv.style.padding="3px"
-       
-        
+
+
         var imageDiv = document.createElement("div");
         imageDiv.style.marginTop="0"
-        
+
         var image = document.createElement("img");
         image.style.height="100%"
-        
-        
+
+
         imageDiv.style.height="60px"
         imageDiv.style.marginLeft="0";
-        
+
         imageDiv.append(image);
         var decDiv = document.createElement("div");
         decDiv.style.marginLeft="10px";
         decDiv.style.textAlign="left"
-        
+
         decDiv.style.marginTop="0"
-       
+
         decDiv.style.display="flex";
         decDiv.style.flexDirection="column";
         decDiv.style.gap="5px"
@@ -940,7 +949,7 @@ mainDiv.style.marginTop="0"
         priceDiv.style.display="flex";
         priceDiv.style.alignItems="center"
         priceDiv.style.justifyContent="left"
-        
+
         var priceText = document.createElement("p")
         priceText.style.textAlign="left"
         priceText.style.margin="0"
@@ -950,11 +959,8 @@ mainDiv.style.marginTop="0"
         itemsDiv.append(imageDiv,decDiv,priceDiv);
         itemsDiv.style.display="flex";
         itemsDiv.style.borderRadius="5px"
-      
+
         innerDiv.append(itemsDiv);
-
-       
-
     })
     var checkoutbtn = document.createElement("button");
     checkoutbtn.style.padding="10px 10px"
@@ -997,30 +1003,31 @@ mainDiv1.style.marginTop="0"
 
 
 
-    
-    
+
+
     mainDiv1.style.position="absolute";
     mainDiv1.style.width="35vw";
     mainDiv1.style.top="47px";
     mainDiv1.style.right="-1px";
-   
+
     mainDiv1.style.backgroundColor="#eeeeee";
     innerDiv1.innerText="YOUR CART IS EMPTY"
     mainDiv1.style.display="none"
     document.querySelector("#cart").append(mainDiv1)
 function showCart(){
     if(product.length == 0 || product==null){
-        
+
         document.getElementById("empty").style.display="flex";
         document.getElementById("cartPopup").style.display="none";
     }else{
         document.getElementById("cartPopup").style.display="flex";
     }
-   
+
 }
 function removeCart(){
     document.getElementById("empty").style.display="none";
     document.getElementById("cartPopup").style.display="none";
 }
+
 </script>
 <script src="scripts/login.js"></script>
