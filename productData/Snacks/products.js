@@ -1,14 +1,14 @@
 
 var snacksArr = allProducts.snacksArr
-document.querySelector("#title").innerText+=" ("+snacksArr.length+")";
+document.querySelector("#title").innerText += " (" + snacksArr.length + ")";
 
 
 var checkboxArr = document
     .querySelectorAll(".checkbox")
-
+var newArr = [];
 for (var i = 0; i < checkboxArr.length; i++) {
     checkboxArr[i].addEventListener("click", function () {
-        var newArr = [];
+        newArr = [];
 
 
         if (brandFilter1.checked === true) {
@@ -188,4 +188,44 @@ for (var i = 0; i < checkboxArr.length; i++) {
     });
 }
 ;
+function priceSort() {
+    if (newArr.length == 0) {
+        newArr = snacksArr
+    }
+    var selected = document.getElementById("sort-bar").value;
+    if (selected == "lowToHigh") {
+
+        newArr.sort(function (a, b) {
+
+            return a.price - b.price;
+
+        })
+    }
+    else if (selected == "highToLow") {
+        newArr.sort(function (a, b) {
+
+            return b.price - a.price;
+        })
+    }
+
+    else if (selected == "A-Z") {
+        console.log("yes")
+        newArr.sort(function (a, b) {
+
+            if (a.name > b.name) return 1;
+            if (a.name < b.name) return -1;
+            return 0;
+        })
+    }
+    else if (selected == "Z-A") {
+        newArr.sort(function (a, b) {
+            if (a.name < b.name) return 1;
+            if (a.name > b.name) return -1;
+            return 0;
+        })
+    }
+
+
+    displayProducts(newArr)
+}
 displayProducts(snacksArr)

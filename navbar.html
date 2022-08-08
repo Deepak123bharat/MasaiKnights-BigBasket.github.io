@@ -874,9 +874,56 @@
 
 
     // cart hover
-    document.getElementById("cart").addEventListener("mouseover",showCart);
-document.getElementById("cart").addEventListener("mouseout",removeCart);
-var mainDiv =  document.createElement("div")
+    document.getElementById("cart").addEventListener("mouseenter",showCart);
+document.getElementById("cart").addEventListener("mouseleave",removeCart);
+
+
+
+
+// EMPTY CART TEXT
+
+    
+
+
+
+
+    
+
+
+   
+function showCart(){
+    var product = JSON.parse(localStorage.getItem("cart") || []);
+    console.log(product)
+    if(product.length == 0){
+
+        var mainDiv1 =  document.createElement("div")
+        mainDiv1.setAttribute("id","empty")
+     var innerDiv1 = document.createElement("div")
+     mainDiv1.append(innerDiv1)
+mainDiv1.style.boxShadow="rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px";
+mainDiv1.style.padding="10px"
+innerDiv1.style.width="100%"
+innerDiv1.style.padding="15px"
+innerDiv1.style.textAlign="center"
+innerDiv1.style.backgroundColor="white"
+innerDiv1.style.marginTop="0"
+mainDiv1.style.marginTop="0"
+
+
+
+
+
+    mainDiv1.style.position="absolute";
+    mainDiv1.style.width="35vw";
+    mainDiv1.style.top="47px";
+    mainDiv1.style.right="-1px";
+
+    mainDiv1.style.backgroundColor="#eeeeee";
+    innerDiv1.innerText="YOUR CART IS EMPTY"
+   
+    document.querySelector("#cart").append(mainDiv1)
+    }else{
+        var mainDiv =  document.createElement("div")
 var innerDiv = document.createElement("div")
 mainDiv.style.boxShadow="rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px";
 
@@ -898,7 +945,8 @@ mainDiv.style.marginTop="0"
     document.querySelector("#cart").append(mainDiv)
 
     // innerDiv.style.padding="10px";
-    var product = JSON.parse(localStorage.getItem("cart"));
+   
+   
     product.map(function (elem){
         var itemsDiv = document.createElement("div")
 
@@ -962,6 +1010,7 @@ mainDiv.style.marginTop="0"
 
         innerDiv.append(itemsDiv);
     })
+
     var checkoutbtn = document.createElement("button");
     checkoutbtn.style.padding="10px 10px"
     checkoutbtn.style.backgroundColor="#72A020"
@@ -970,6 +1019,7 @@ mainDiv.style.marginTop="0"
     checkoutbtn.style.borderRadius="5px"
     checkoutbtn.style.cursor="pointer"
     checkoutbtn.style.marginTop="5px"
+    checkoutbtn.style.height="40px"
     checkoutbtn.addEventListener("mouseover",()=>{
         checkoutbtn.style.backgroundColor="#c1e879"
     })
@@ -983,50 +1033,20 @@ mainDiv.style.marginTop="0"
     innerDiv.append(checkoutbtn)
     mainDiv.append(innerDiv);
     mainDiv.style.display="none";
-
-
-    // EMPTY CART TEXT
-
-
-    var mainDiv1 =  document.createElement("div")
-        mainDiv1.setAttribute("id","empty")
-     var innerDiv1 = document.createElement("div")
-     mainDiv1.append(innerDiv1)
-mainDiv1.style.boxShadow="rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px";
-mainDiv1.style.padding="10px"
-innerDiv1.style.width="100%"
-innerDiv1.style.padding="15px"
-innerDiv1.style.textAlign="center"
-innerDiv1.style.backgroundColor="white"
-innerDiv1.style.marginTop="0"
-mainDiv1.style.marginTop="0"
-
-
-
-
-
-    mainDiv1.style.position="absolute";
-    mainDiv1.style.width="35vw";
-    mainDiv1.style.top="47px";
-    mainDiv1.style.right="-1px";
-
-    mainDiv1.style.backgroundColor="#eeeeee";
-    innerDiv1.innerText="YOUR CART IS EMPTY"
-    mainDiv1.style.display="none"
-    document.querySelector("#cart").append(mainDiv1)
-function showCart(){
-    if(product.length == 0 || product==null){
-
-        document.getElementById("empty").style.display="flex";
-        document.getElementById("cartPopup").style.display="none";
-    }else{
         document.getElementById("cartPopup").style.display="flex";
     }
 
 }
 function removeCart(){
-    document.getElementById("empty").style.display="none";
-    document.getElementById("cartPopup").style.display="none";
+    var product = JSON.parse(localStorage.getItem("cart") || []);
+    if(product.length==0){
+        document.getElementById("empty").remove();
+    }else{
+        document.getElementById("cartPopup").outerHTML="";
+    }
+    
+    
+    
 }
 
 </script>

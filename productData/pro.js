@@ -1266,9 +1266,9 @@ function displayProducts(data) {
   data.map(function (elem, index) {
     var div1 = document.createElement("div");
     var div2 = document.createElement("div");
-    var discountOnProduct = parseInt((+elem.strikedOdprice-+elem.price)/+elem.strikedOdprice*100)
-    if(discountOnProduct>0)
-      div2.innerText = `GET `+discountOnProduct+`% OFF`;
+    var discountOnProduct = parseInt((+elem.strikedOdprice - +elem.price) / +elem.strikedOdprice * 100)
+    if (discountOnProduct > 0)
+      div2.innerText = `GET ` + discountOnProduct + `% OFF`;
     else
       div2.style.visibility = "hidden"
 
@@ -1283,7 +1283,7 @@ function displayProducts(data) {
         name: elem.name,
         Quantity: elem.Quantity,
         price: elem.price,
-        strikedOdprice:elem.strikedOdprice
+        strikedOdprice: elem.strikedOdprice
       }
       localStorage.setItem("productDescription", JSON.stringify(descriptionObject))
       window.location.href = "./../../description.html"
@@ -1315,7 +1315,8 @@ function displayProducts(data) {
     span5.innerText = "Qty : ";
     var quantity = document.createElement("input");
     quantity.setAttribute("type", "number");
-    quantity.defaultValue=1;
+    quantity.setAttribute("id", "quantityToAdd")
+    quantity.defaultValue = 1;
     quantity.style.width = "60px";
     var button = document.createElement("button");
 
@@ -1329,7 +1330,7 @@ function displayProducts(data) {
         price: elem.price,
         strikedOdprice: elem.strikedOdprice,
       }
-      addToCart(obj);
+      addToCart(obj, parseInt(quantity.value));
     });
     span4.append(span5, quantity, button);
 
@@ -1345,14 +1346,21 @@ function displayProducts(data) {
 }
 
 var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
-function addToCart(obj) {
-  window.location.href = window.location.href
-  cartArr.push(obj);
-  localStorage.setItem("cart", JSON.stringify(cartArr));
-  if (localStorage.getItem("cart") != null) {
-    document.querySelector("#cart_items").innerText = JSON.parse(localStorage.getItem("cart")).length
+function addToCart(obj, quantity) {
+  // window.location.href = window.location.href
+  for (var i = 0; i < quantity; i++) {
+    cartArr.push(obj);
+    localStorage.setItem("cart", JSON.stringify(cartArr));
+    if (localStorage.getItem("cart") != null) {
+      document.querySelector("#cart_items").innerText = JSON.parse(localStorage.getItem("cart")).length
+    }
+    else {
+      document.querySelector("#cart_items").innerText = 0
+    }
+
   }
-  else {
-    document.querySelector("#cart_items").innerText = 0
-  }
+
 }
+
+
+
