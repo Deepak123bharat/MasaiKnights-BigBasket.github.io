@@ -1266,9 +1266,9 @@ function displayProducts(data) {
   data.map(function (elem, index) {
     var div1 = document.createElement("div");
     var div2 = document.createElement("div");
-    var discountOnProduct = parseInt((+elem.strikedOdprice-+elem.price)/+elem.strikedOdprice*100)
-    if(discountOnProduct>0)
-      div2.innerText = `GET `+discountOnProduct+`% OFF`;
+    var discountOnProduct = parseInt((+elem.strikedOdprice - +elem.price) / +elem.strikedOdprice * 100)
+    if (discountOnProduct > 0)
+      div2.innerText = `GET ` + discountOnProduct + `% OFF`;
     else
       div2.style.visibility = "hidden"
 
@@ -1316,7 +1316,7 @@ function displayProducts(data) {
     span5.innerText = "Qty : ";
     var quantity = document.createElement("input");
     quantity.setAttribute("type", "number");
-    quantity.defaultValue=1;
+    quantity.defaultValue = 1;
     quantity.style.width = "60px";
     var button = document.createElement("button");
 
@@ -1357,3 +1357,6 @@ function addToCart(obj) {
     document.querySelector("#cart_items").innerText = 0
   }
 }
+
+
+

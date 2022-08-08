@@ -166,12 +166,11 @@
           <h2 id="title">Fruits & Vegetables</h2>
         </div>
         <div class="sort-bar">
-          <select id="sort-bar">
-            <option value="">Popularity</option>
-            <option value="">Price - Low to High</option>
-            <option value="">Price - High to Low</option>
-            <option value="">Alphabetical</option>
-            <option value="">% Off - High to Low</option>
+          <select id="sort-bar" onchange="priceSort()">
+            <option value="lowToHigh">Price - Low to High</option>
+            <option value="highToLow">Price - High to Low</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
           </select>
         </div>
         <div class="allproducts-border">
