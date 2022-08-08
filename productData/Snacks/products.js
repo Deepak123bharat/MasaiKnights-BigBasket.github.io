@@ -1,6 +1,6 @@
 
 var snacksArr = allProducts.snacksArr
-document.querySelector("#title").innerText += " (" + snacksArr.length + ")";
+document.querySelector("#productValue").innerText = " (" + snacksArr.length + ")";
 
 
 var checkboxArr = document
@@ -183,6 +183,7 @@ for (var i = 0; i < checkboxArr.length; i++) {
             displayProducts(snacksArr);
         }
         else {
+            document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
             displayProducts(newArr)
         }
     });
@@ -225,7 +226,7 @@ function priceSort() {
         })
     }
 
-
+    document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
     displayProducts(newArr)
 }
 displayProducts(snacksArr)

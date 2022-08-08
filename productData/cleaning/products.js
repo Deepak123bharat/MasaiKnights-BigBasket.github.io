@@ -2,7 +2,7 @@
 // cleaning
 var dairyArr = allProducts.cleaningArr
 
-document.querySelector("#title").innerText += " (" + dairyArr.length + ")";
+document.querySelector("#productValue").innerText = " (" + dairyArr.length + ")";
 
 
 var checkboxArr = document
@@ -16,13 +16,13 @@ for (var i = 0; i < checkboxArr.length; i++) {
 
         if (brandFilter1.checked === true) {
             newArr = dairyArr.filter(function (elem) {
-                return elem.brand == "Nescafe";
+                return elem.brand == "Harpic";
             });
             //   displayProducts(newArr);
         }
         if (brandFilter2.checked === true) {
             var tempArr = dairyArr.filter(function (elem) {
-                return elem.brand == "BRU";
+                return elem.brand == "Vim";
             });
             for (var i = 0; i < tempArr.length; i++) {
                 newArr.push(tempArr[i]);
@@ -31,7 +31,7 @@ for (var i = 0; i < checkboxArr.length; i++) {
         }
         if (brandFilter3.checked === true) {
             var tempArr = dairyArr.filter(function (elem) {
-                return elem.brand == "Fresho";
+                return elem.brand == "Surf Excel";
             });
             for (var i = 0; i < tempArr.length; i++) {
                 newArr.push(tempArr[i]);
@@ -40,7 +40,7 @@ for (var i = 0; i < checkboxArr.length; i++) {
         }
         if (brandFilter4.checked === true) {
             var tempArr = dairyArr.filter(function (elem) {
-                return elem.brand == "3Roses";
+                return elem.brand == "Ariel";
             });
             for (var i = 0; i < tempArr.length; i++) {
                 newArr.push(tempArr[i]);
@@ -186,6 +186,7 @@ for (var i = 0; i < checkboxArr.length; i++) {
             displayProducts(dairyArr);
         }
         else {
+            document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
             displayProducts(newArr)
         }
     });
@@ -227,7 +228,7 @@ function priceSort() {
             return 0;
         })
     }
-
+    document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
 
     displayProducts(newArr)
 }

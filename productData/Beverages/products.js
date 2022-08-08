@@ -1,6 +1,6 @@
 var beveragesArr = allProducts.beveragesArr
 
-document.querySelector("#title").innerText += " (" + beveragesArr.length + ")";
+document.querySelector("#productValue").innerText = " (" + beveragesArr.length + ")";
 
 var checkboxArr = document
     .querySelectorAll(".checkbox")
@@ -183,6 +183,7 @@ for (var i = 0; i < checkboxArr.length; i++) {
             displayProducts(beveragesArr);
         }
         else {
+            document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
             displayProducts(newArr)
         }
     });
@@ -225,7 +226,7 @@ function priceSort() {
         })
     }
 
-
+    document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
     displayProducts(newArr)
 }
 displayProducts(beveragesArr)

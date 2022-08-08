@@ -1345,8 +1345,10 @@ function displayProducts(data) {
   });
 }
 
-var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
+
 function addToCart(obj, quantity) {
+  var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
+
   // window.location.href = window.location.href
   for (var i = 0; i < quantity; i++) {
     cartArr.push(obj);

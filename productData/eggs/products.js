@@ -2,7 +2,7 @@
 var dairyArr = allProducts.eggsArr
 
 
-document.querySelector("#title").innerText += " (" + dairyArr.length + ")";
+document.querySelector("#productValue").innerText = " (" + dairyArr.length + ")";
 
 
 var checkboxArr = document
@@ -185,6 +185,7 @@ for (var i = 0; i < checkboxArr.length; i++) {
             displayProducts(dairyArr);
         }
         else {
+            document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
             displayProducts(newArr)
         }
     });
@@ -227,7 +228,7 @@ function priceSort() {
         })
     }
 
-
+    document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
     displayProducts(newArr)
 }
 displayProducts(dairyArr)

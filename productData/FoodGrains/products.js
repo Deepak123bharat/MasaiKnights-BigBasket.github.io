@@ -1,7 +1,7 @@
 
 var foodgrainsArr = allProducts.foodgrainsArr
 
-document.querySelector("#title").innerText += " (" + foodgrainsArr.length + ")";
+document.querySelector("#productValue").innerText = " (" + foodgrainsArr.length + ")";
 
 
 var checkboxArr = document
@@ -184,6 +184,7 @@ for (var i = 0; i < checkboxArr.length; i++) {
             displayProducts(foodgrainsArr);
         }
         else {
+            document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
             displayProducts(newArr)
         }
     });
@@ -226,7 +227,7 @@ function priceSort() {
         })
     }
 
-
+    document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
     displayProducts(newArr)
 }
 displayProducts(foodgrainsArr)
