@@ -704,13 +704,29 @@
     var title = document.querySelector("#third > h3")
     var img = document.querySelector("#second > img")
     var price = document.querySelector("#third > div > h4")
+    var discount1 = document.querySelector("#third > div > h5")
     var product = JSON.parse(localStorage.getItem("productDescription"))
-    console.log(product)
+    console.log(product+" products")
     price.innerHTML = product.price
-    title.innerHTML = product.title
-    img.src = product.imgscr
+    title.innerHTML = product.name
+    img.src = product.image_adress
     img.style.width = "300px"
-    
-    localStorage.clear("productDescription")
+    discount1.innerHTML = `you save `+parseInt((+product.strikedOdprice-+product.price)/+product.strikedOdprice*100)+`%`
+    console.log(product)
+
+    document.querySelector("#addtocart").addEventListener("click", ()=>{
+        console.log("event clickend")
+        var quantity = document.querySelector("#smallbox").value || 1
+        var productArrFromLocal = JSON.parse(localStorage.getItem("cart")) || [];
+        var product = JSON.parse(localStorage.getItem("productDescription"))
+        for(var i=0; i<Number(quantity); i++)
+        {
+            productArrFromLocal.push(product)
+        }
+        if(productArrFromLocal!=null)
+            localStorage.setItem("cart", JSON.stringify(productArrFromLocal))
+        var cartItems = document.getElementById("cart_items")
+        cartItems.innerText = (+cartItems.innerText)+Number(quantity)
+    })
 </script>
 </html>

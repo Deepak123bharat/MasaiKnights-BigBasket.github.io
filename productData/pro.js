@@ -1277,14 +1277,13 @@ function displayProducts(data) {
     var image = document.createElement("img");
     image.setAttribute("src", elem.image_adress);
     image.addEventListener("click", (ele) => {
-      var title = document.querySelector(".products-cards > div> div> h6").innerText
-      var price = document.querySelector(".products-cards > div> div> span > span:last-child").innerText
-      var desc = document.querySelector(".products-cards > div> div> a").innerText
       var descriptionObject = {
-        "imgscr": elem.image_adress,
-        "title": title,
-        "price": price,
-        "desc": desc,
+        image_adress: elem.image_adress,
+        brand: elem.brand,
+        name: elem.name,
+        Quantity: elem.Quantity,
+        price: elem.price,
+        strikedOdprice:elem.strikedOdprice
       }
       localStorage.setItem("productDescription", JSON.stringify(descriptionObject))
       window.location.href = "./../../description.html"
