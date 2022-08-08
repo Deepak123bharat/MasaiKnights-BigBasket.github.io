@@ -157,17 +157,34 @@
     allProducts.vegetableArr.forEach((element)=>{
         allProductArr.push(element)
     })
-    document.querySelector("#title").innerText += " (" + allProductArr.length + ")";
 
+    //Get Data from local storage
+    // search
     var searchTarget = localStorage.getItem("searchTarget")
     localStorage.removeItem("searchTarget")
+
+    // offers in navbar
     var showAllOffers = localStorage.getItem("ShowAllOffers")
     localStorage.removeItem("ShowAllOffers")
+
+    // Discount divs on the main page
+    var itemPriceLessThen30 = localStorage.getItem("showItemsPriceLessThen30")
+    localStorage.removeItem("showItemsPriceLessThen30")
+    var DealsOfTheWeekImg1 = localStorage.getItem("DealsOfTheWeekImg1")
+    localStorage.removeItem("DealsOfTheWeekImg1")
+    var BigPackBiggerDiscount = localStorage.getItem("BigPackBiggerDiscount")
+    localStorage.removeItem("BigPackBiggerDiscount")
+    var CombosYouCantMiss = localStorage.getItem("CombosYouCantMiss")
+    localStorage.removeItem("CombosYouCantMiss")
+
+
     if(searchTarget!=null)
     {
         allProductArr = allProductArr.filter((value)=>{
-        var str = value.name.toLowerCase()
-        if(str.includes(searchTarget.toLowerCase()))
+        var name = value.name.toLowerCase()
+        var brand = value.name.toLowerCase()
+        var quantity = value.name.toLowerCase()
+        if(name.includes(searchTarget.toLowerCase()) || (name.includes(searchTarget.toLowerCase())) ||  (name.includes(searchTarget.toLowerCase())))
             return value
         })
     }
@@ -178,6 +195,37 @@
             var stPrice = value.strikedOdprice
             if(stPrice > price)
                 return value
+        })
+    }
+    else if(itemPriceLessThen30!=null)
+    {
+        allProductArr = allProductArr.filter((value)=>{
+            if(value.price <= 30)
+                return value
+        })
+    }
+    else if(BigPackBiggerDiscount!=null)
+    {
+        allProductArr = allProductArr.filter((value)=>{
+            var discount = (+value.strikedOdprice-+value.price)/+value.strikedOdprice*100
+            if(discount >= 30)
+                return value
+        })
+    }
+    else if(DealsOfTheWeekImg1!=null)
+    {
+        allProductArr = allProductArr.filter((value)=>{
+            var discount = (+value.strikedOdprice-+value.price)/+value.strikedOdprice*100
+            if(discount >= 30 && value.price<100)
+                return value
+        })
+    }
+    else if(CombosYouCantMiss!=null)
+    {
+        allProductArr = allProductArr.filter((value)=>{
+            var discount = (+value.strikedOdprice-+value.price)/+value.strikedOdprice*100
+            if(value.price > 500)
+              return value
         })
     }
     
@@ -358,13 +406,16 @@
                 brandFilter16.checked == false &&
                 brandFilter17.checked == false
             ) {
+                document.querySelector("#title").innerText += " (" + allProductArr.length + ")";
                 displayProducts(allProductArr);
             }
             else {
+                document.querySelector("#title").innerText += " (" + allProductArr.length + ")";
                 displayProducts(newArr)
             }
         });
     }
     ;
+    document.querySelector("#title").innerText += " (" + allProductArr.length + ")";
     displayProducts(allProductArr)
 </script>

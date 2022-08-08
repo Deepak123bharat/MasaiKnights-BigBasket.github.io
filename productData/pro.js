@@ -279,7 +279,6 @@ var allProducts = {
       Quantity: "5 L can",
       price: "70",
       strikedOdprice: "70"
-
     },
     {
       image_adress: "https://www.bigbasket.com/media/uploads/p/s/240065_14-tata-tea-gold-tea.jpg",
