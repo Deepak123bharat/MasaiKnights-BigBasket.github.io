@@ -1,6 +1,6 @@
 var beautyArr = allProducts.beautyArr
 
-document.querySelector("#title").innerText += " (" + beautyArr.length + ")";
+document.querySelector("#productValue").innerText = " (" + beautyArr.length + ")";
 
 var brandFilter1 = document.querySelector("#brand-filter1");
 var brandFilter2 = document.querySelector("#brand-filter2");
@@ -203,6 +203,7 @@ for (var i = 0; i < checkboxArr.length; i++) {
             displayProducts(beautyArr);
         }
         else {
+            document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
             displayProducts(newArr)
         }
     });
@@ -245,7 +246,7 @@ function priceSort() {
         })
     }
 
-
+    document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
     displayProducts(newArr)
 }
 displayProducts(beautyArr)

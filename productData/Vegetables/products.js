@@ -1,7 +1,8 @@
 var vegetableArr = allProducts.vegetableArr
+document.querySelector("#productValue").innerText = " (" + vegetableArr.length + ")";
 
 
-document.querySelector("#title").innerText += " (" + vegetableArr.length + ")";
+
 
 
 
@@ -181,11 +182,15 @@ for (var i = 0; i < checkboxArr.length; i++) {
             brandFilter16.checked == false &&
             brandFilter17.checked == false
         ) {
+
             displayProducts(vegetableArr);
+
         }
         else {
+            document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
             displayProducts(newArr)
         }
+
     });
 }
 ;
@@ -226,7 +231,7 @@ function priceSort() {
         })
     }
 
-
+    document.querySelector("#productValue").innerText = " (" + newArr.length + ")";
     displayProducts(newArr)
 }
 displayProducts(vegetableArr)

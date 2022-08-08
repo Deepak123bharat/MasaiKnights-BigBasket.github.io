@@ -776,9 +776,9 @@
     })
     var height = document.getElementById("navbar").offsetHeight
 
-    document.getElementById("cart").addEventListener("click", () => {
-        window.location.href = "cart.html"
-    })
+    // document.getElementById("cart").addEventListener("click", () => {
+    //     window.location.href = "cart.html"
+    // })
 
 
     // add shop with logo when scrolling in y direction
@@ -844,9 +844,9 @@
         return array;
     }
 
-    document.querySelector("#cart").addEventListener("click", () => {
-        window.location.href = "/cart.html"
-    })
+    // document.querySelector("#cart").addEventListener("click", () => {
+    //     window.location.href = "/cart.html"
+    // })
 
     //search functionality
     document.querySelector("#mfglass").addEventListener("click", ()=>{
@@ -947,7 +947,7 @@ mainDiv.style.marginTop="0"
     // innerDiv.style.padding="10px";
    
    
-    product.map(function (elem){
+    product.map(function (elem,index){
         var itemsDiv = document.createElement("div")
 
         itemsDiv.style.marginTop="0"
@@ -1003,13 +1003,31 @@ mainDiv.style.marginTop="0"
         priceText.style.margin="0"
         priceText.innerText="Rs "+elem.price;
         priceDiv.append(priceText)
+        var deleteCartItem = document.createElement("div");
+        var deleteBtn = document.createElement("button");
+        deleteBtn.innerText="X";
+        deleteCartItem.append(deleteBtn);
         image.setAttribute("src",elem.image_adress);
-        itemsDiv.append(imageDiv,decDiv,priceDiv);
+        itemsDiv.append(imageDiv,decDiv,priceDiv,deleteCartItem);
+        deleteBtn.addEventListener("click",function (index){
+        product.splice(index,1);
+        localStorage.setItem("cart",JSON.stringify(product))
+       
+        deleteBtn.parentNode.parentNode.remove()
+        document.querySelector("#cart_qunt>p>span").innerText=product.length
+       if(product.length == 0){
+        document.getElementById("cartPopup").outerHTML="";
+        
+        
+       }
+
+        })
         itemsDiv.style.display="flex";
         itemsDiv.style.borderRadius="5px"
 
         innerDiv.append(itemsDiv);
     })
+   
 
     var checkoutbtn = document.createElement("button");
     checkoutbtn.style.padding="10px 10px"
@@ -1041,6 +1059,8 @@ function removeCart(){
     var product = JSON.parse(localStorage.getItem("cart") || []);
     if(product.length==0){
         document.getElementById("empty").remove();
+        document.getElementById("cartPopup").outerHTML="";
+        
     }else{
         document.getElementById("cartPopup").outerHTML="";
     }
