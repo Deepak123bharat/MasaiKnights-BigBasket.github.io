@@ -1267,7 +1267,11 @@ function displayProducts(data) {
   data.map(function (elem, index) {
     var div1 = document.createElement("div");
     var div2 = document.createElement("div");
-    div2.innerText = "GET 20% OFF";
+    var discountOnProduct = parseInt((+elem.strikedOdprice-+elem.price)/+elem.strikedOdprice*100)
+    if(discountOnProduct>0)
+      div2.innerText = `GET `+discountOnProduct+`% OFF`;
+    else
+      div2.style.visibility = "hidden"
 
     var div3 = document.createElement("div");
     div3.setAttribute("class", "image-div");
