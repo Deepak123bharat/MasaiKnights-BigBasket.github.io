@@ -161,11 +161,26 @@
 
     var searchTarget = localStorage.getItem("searchTarget")
     localStorage.removeItem("searchTarget")
-    allProductArr = allProductArr.filter((value)=>{
+    var showAllOffers = localStorage.getItem("ShowAllOffers")
+    localStorage.removeItem("ShowAllOffers")
+    if(searchTarget!=null)
+    {
+        allProductArr = allProductArr.filter((value)=>{
         var str = value.name.toLowerCase()
         if(str.includes(searchTarget.toLowerCase()))
             return value
-    })
+        })
+    }
+    else if(showAllOffers!=null)
+    {
+        allProductArr = allProductArr.filter((value)=>{
+            var price = value.price
+            var stPrice = value.strikedOdprice
+            if(stPrice > price)
+                return value
+        })
+    }
+    
     var checkboxArr = document
         .querySelectorAll(".checkbox")
 
