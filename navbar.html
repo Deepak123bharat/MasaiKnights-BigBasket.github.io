@@ -852,7 +852,7 @@
     document.querySelector("#mfglass").addEventListener("click", ()=>{
         var searchTarget = document.querySelector("#search_item > input").value 
         localStorage.setItem("searchTarget", searchTarget)
-        window.location.href = "search.html"
+        window.location.href = "/search.html"
     })
 
     // search when enter is pressed
@@ -861,7 +861,7 @@
         {
             var searchTarget = document.querySelector("#search_item > input").value 
             localStorage.setItem("searchTarget", searchTarget)
-            window.location.href = "search.html"
+            window.location.href = "/search.html"
         }
     })
 
@@ -869,7 +869,7 @@
     //offers click 
     document.querySelector("#offers").addEventListener("click", ()=>{
         localStorage.setItem("ShowAllOffers", true)
-        window.location.href = "search.html"
+        window.location.href = "/search.html"
     })
 
 
