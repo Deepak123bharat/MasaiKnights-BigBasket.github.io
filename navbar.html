@@ -898,7 +898,8 @@ mainDiv.style.marginTop="0"
     document.querySelector("#cart").append(mainDiv)
 
     // innerDiv.style.padding="10px";
-    var product = JSON.parse(localStorage.getItem("cart"));
+    var product = JSON.parse(localStorage.getItem("cart") || 0);
+   
     product.map(function (elem){
         var itemsDiv = document.createElement("div")
 
@@ -962,6 +963,7 @@ mainDiv.style.marginTop="0"
 
         innerDiv.append(itemsDiv);
     })
+
     var checkoutbtn = document.createElement("button");
     checkoutbtn.style.padding="10px 10px"
     checkoutbtn.style.backgroundColor="#72A020"
@@ -985,8 +987,8 @@ mainDiv.style.marginTop="0"
     mainDiv.style.display="none";
 
 
-    // EMPTY CART TEXT
 
+// EMPTY CART TEXT
 
     var mainDiv1 =  document.createElement("div")
         mainDiv1.setAttribute("id","empty")
@@ -1014,8 +1016,16 @@ mainDiv1.style.marginTop="0"
     innerDiv1.innerText="YOUR CART IS EMPTY"
     mainDiv1.style.display="none"
     document.querySelector("#cart").append(mainDiv1)
+
+
+
+
+    
+
+
+   
 function showCart(){
-    if(product.length == 0 || product==null){
+    if(product == 0){
 
         document.getElementById("empty").style.display="flex";
         document.getElementById("cartPopup").style.display="none";
